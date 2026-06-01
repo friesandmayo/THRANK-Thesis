@@ -89,7 +89,6 @@ var
   NWR                          (long_name='Net Wealth Ratio')
   GINI_W                       (long_name='Gini Coefficient for Wealth')
   GINI_I                       (long_name='Gini Coefficient for Income')
-  WR                           (long_name='Walras Residual')
 ;
 
 %--------------------------------------------------------------------------------
@@ -372,11 +371,6 @@ model;
   [name='53. Housing Market Clearing']
   H = H_bar;
 
-  [name='Goods Market Clearing'] // checking that Walras Law holds
-  WR = - Y + C + I + i_f*f - i*(m_cB+lambda_H*m_cH) + (kappa_y/2)*((I/(I(-1))-1)^2)*I
-      + (kappa_m/2) * (( i_m/(i_m(-1)) - 1 )^2) * i_m * n 
-      + (kappa_d/2) * (( i_d/(i_d(-1)) - 1 )^2) * i_d * m;
-
   // ---------- Shocks ----------
   [name='54. Technological Process']
   log(Z) = rho_z*log(Z(-1)) + varepsilon_z;
@@ -385,9 +379,6 @@ model;
   xi = rho_xi*xi(-1) + varepsilon_xi;
 
   // ---------- Wealth & Income ----------
-
-  [name='Interest Rate Spread']
-  spread = i - i_d;
 
   [name='H Income']
   INC_H = w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1) + T_H;
@@ -476,7 +467,6 @@ initval;
   i_f = i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
-  spread = i - i_d;
 
   // H 
   L = ((lambda_H*L_H)^alpha_L) * ((lambda_M*L_M)^(1-alpha_L));
@@ -508,7 +498,6 @@ initval;
   C_S = 1/lambda_S * (C-lambda_H*C_H-lambda_M*C_M);
   X_1 = (C_S^(-sigma)) * Y * mc / (1 - theta * betta_S) ;
   X_2 = (C_S^(-sigma)) * Y / (1 - theta * betta_S) ;
-  WR = - Y + C + I ;
 
   // S
   T_S = -lambda_H/lambda_S*T_H;
@@ -580,7 +569,6 @@ endval;
   i_f = i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
-  spread = i - i_d;
 
   // H 
   L = ((lambda_H*L_H)^alpha_L) * ((lambda_M*L_M)^(1-alpha_L));
@@ -612,7 +600,6 @@ endval;
   C_S = 1/lambda_S * (C-lambda_H*C_H-lambda_M*C_M);
   X_1 = (C_S^(-sigma)) * Y * mc / (1 - theta * betta_S) ;
   X_2 = (C_S^(-sigma)) * Y / (1 - theta * betta_S) ;
-  WR = - Y + C + I ;
 
   // S
   T_S = -lambda_H/lambda_S*T_H;
@@ -825,11 +812,6 @@ title('Profits (Levels)'); legend('Goods (d^i)', 'Banks (d^b)', 'Capital (d^k)',
 subplot(3,3,6);
 plot(time_axis, get_lvl('T_H'), 'b', time_axis, get_lvl('T_M'), 'r', time_axis, get_lvl('T_S'), 'g', 'LineWidth', 2);
 title('Transfers (Levels)'); legend('T_H', 'T_M', 'T_S', 'Location', 'best'); grid on; xlim([1 options_.periods]);
-
-% Subplot 7: Walras Residual (Levels)
-subplot(3,3,7);
-plot(time_axis, get_lvl('WR'), 'k', 'LineWidth', 2);
-title('Walras Residual (Levels)'); grid on; xlim([1 options_.periods]);
 
 exportgraphics(fig2, 'model/graphs/Fig2_FHP_Dynamics.pdf', 'ContentType', 'vector');
 
