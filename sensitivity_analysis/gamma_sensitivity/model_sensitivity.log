@@ -1,0 +1,425 @@
+Starting Dynare (version 6.5).
+Calling Dynare with arguments: noclearall -DGamma_val=0.75
+[Warning: Function gamma has the same name as a MATLAB built-in. We suggest you rename the function to avoid a
+potential name conflict.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_build_dir', 'C:\dynare\6.5\matlab\get_build_dir.m', 28)" style="font-weight:bold">get_build_dir</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\get_build_dir.m',28,0)">line 28</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 207)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',207,0)">line 207</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gamma', 'X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m', 19)" style="font-weight:bold">gamma</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m',19,0)">line 19</a>)] 
+[Warning: Function gamma has the same name as a MATLAB built-in. We suggest you rename the function to avoid a
+potential name conflict.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 241)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',241,0)">line 241</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gamma', 'X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m', 19)" style="font-weight:bold">gamma</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m',19,0)">line 19</a>)] 
+Starting preprocessing of the model file ... 
+Found 75 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+10 block(s) found: 
+  9 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 48 equation(s) 
+                                 and 48 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+9 block(s) found: 
+  8 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 49 equation(s) 
+                                 and 44 feedback variable(s). 
+Preprocessing completed. 
+[Warning: Function gamma has the same name as a MATLAB built-in. We suggest you rename the function to avoid a
+potential name conflict.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 259)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',259,0)">line 259</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('gamma', 'X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m', 19)" style="font-weight:bold">gamma</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\MasterThesis\Models\NumericalModels\sensitivity_analysis\gamma_sensitivity\gamma.m',19,0)">line 19</a>)] 
+Preprocessing time: 0h00m02s.
+
+STEADY-STATE RESULTS:
+
+C_H       		 0.152366
+L_H       		 0.319683
+m_H       		 0.0487569
+m_cH      		 7.6262e-06
+m_tilde_H 		 0.0487644
+C_M       		 0.385767
+L_M       		 0.355137
+H_M       		 1.60239
+n_M       		 2.64476
+C_S       		 14.9151
+H_S       		 5.45901
+b_S       		 154.09
+K_S       		 426.441
+I_S       		 10.661
+d_S       		 11.489
+C         		 0.4377
+H         		 1
+d         		 0.11489
+m         		 0.0195028
+n         		 1.56041
+b         		 1.5409
+Y         		 0.54431
+K         		 4.26441
+I         		 0.10661
+L         		 0.197475
+mc        		 0.833333
+d_i       		 0.0907183
+d_k       		 0
+d_b       		 0.0241713
+DELTA     		 1
+X_1       		 0.0305809
+X_2       		 0.036697
+T_H       		 0.0609463
+T_M       		 0
+T_S       		 -2.43785
+T         		 0
+f         		 0.000978189
+m_cB      		 0.000975139
+p_tilde   		 1
+w         		 1.53896
+w_H       		 0.285195
+w_M       		 1.27636
+s         		 2.25686
+q         		 1
+r         		 0.035101
+i_d       		 0.00507374
+i_m       		 0.0255286
+i         		 0.010101
+i_f       		 0.0101499
+pi_var    		 0
+pi_w_H    		 0
+pi_w_M    		 0
+mu        		 0.0218583
+Z         		 1
+xi        		 0
+spread    		 0.00502727
+U_H       		 -5.82749
+V_H       		 -97.1248
+INC_H     		 0.152366
+NW_H      		 0.0487646
+U_M       		 -4.7668
+V_M       		 -158.893
+INC_M     		 0.453284
+NW_M      		 0.971605
+U_S       		 -0.522146
+V_S       		 -52.2146
+INC_S     		 25.5761
+NW_S      		 592.852
+W_TOT     		 -133.119
+INC_TOT   		 58.4145
+NW_TOT    		 652.127
+NWR       		 0.909105
+GINI_W    		 0.932502
+GINI_I    		 0.549412
+WR        		 0
+
+STEADY-STATE RESULTS:
+
+C_H       		 0.152817
+L_H       		 0.31915
+m_H       		 0.0201051
+m_cH      		 0.0307068
+m_tilde_H 		 0.0505887
+C_M       		 0.38529
+L_M       		 0.355662
+H_M       		 1.59963
+n_M       		 2.53673
+C_S       		 14.9726
+H_S       		 5.62198
+b_S       		 147.634
+K_S       		 426.911
+I_S       		 10.6728
+d_S       		 11.6142
+C         		 0.438174
+H         		 1
+d         		 0.116142
+m         		 0.00804205
+n         		 1.49667
+b         		 1.47634
+Y         		 0.54491
+K         		 4.26911
+I         		 0.106728
+L         		 0.197692
+mc        		 0.833333
+d_i       		 0.0908183
+d_k       		 0
+d_b       		 0.0253235
+DELTA     		 1
+X_1       		 0.0304383
+X_2       		 0.0365259
+T_H       		 0.0611268
+T_M       		 0
+T_S       		 -2.44507
+T         		 0
+f         		 0.0126848
+m_cB      		 0.000402102
+p_tilde   		 1
+w         		 1.53896
+w_H       		 0.285985
+w_M       		 1.27588
+s         		 2.17152
+q         		 1
+r         		 0.035101
+i_d       		 0.00535177
+i_m       		 0.0270008
+i         		 0.010101
+i_f       		 0.0107353
+pi_var    		 0
+pi_w_H    		 0
+pi_w_M    		 0
+mu        		 0.0159278
+Z         		 1
+xi        		 0
+spread    		 0.00474924
+U_H       		 -5.81622
+V_H       		 -96.9371
+INC_H     		 0.152817
+NW_H      		 0.0508119
+U_M       		 -4.77171
+V_M       		 -159.057
+INC_M     		 0.453784
+NW_M      		 0.936893
+U_S       		 -0.521088
+V_S       		 -52.1088
+INC_S     		 25.6454
+NW_S      		 586.754
+W_TOT     		 -133.14
+INC_TOT   		 58.5313
+NW_TOT    		 644.063
+NWR       		 0.911019
+GINI_W    		 0.933487
+GINI_I    		 0.549499
+WR        		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+       3.542e-19        3.542e-19                0
+       6.477e-18        6.477e-18                0
+       2.694e-17        2.694e-17                0
+        6.71e-17         6.71e-17                0
+       1.901e-16        1.901e-16                0
+       4.828e-16        4.828e-16                0
+       6.868e-16        6.868e-16                0
+       9.823e-16        9.823e-16                0
+       1.233e-15       -1.233e-15                0
+          0.4721           0.4721                0
+             0.5              0.5                0
+          0.6426           0.6426                0
+          0.6824           0.6824         0.008548
+          0.6824           0.6824        -0.008548
+            0.75             0.75                0
+          0.7706           0.7476           0.1867
+          0.7706           0.7476          -0.1867
+          0.8189           0.8189                0
+          0.8383           0.8383                0
+             0.9              0.9                0
+          0.9635           0.9635                0
+            1.01             1.01                0
+           1.015            1.015                0
+           1.026            1.026                0
+           1.031            1.031                0
+           1.064            1.064                0
+           1.126            1.094           0.2676
+           1.126            1.094          -0.2676
+           1.158            1.158           0.0249
+           1.158            1.158          -0.0249
+           1.299            1.299                0
+           1.335            1.335                0
+           1.347            1.347                0
+            1.49             1.49                0
+           1.517            1.517                0
+            1.57             1.57                0
+       3.425e+16        3.425e+16                0
+       5.492e+16        5.492e+16                0
+       1.054e+17        1.054e+17                0
+             Inf              Inf                0
+
+There are 19 eigenvalue(s) larger than 1 in modulus for 19 forward-looking variable(s)
+The rank condition is verified.
+
+MODEL_DIAGNOSTICS:  No obvious problems with this mod-file were detected.
+
+Information about model_sensitivity (dynamic model)
+
+The following variables appear with a lag and are therefore states:
+m_H(-1)
+m_cH(-1)
+H_M(-1)
+n_M(-1)
+H_S(-1)
+b_S(-1)
+K_S(-1)
+m(-1)
+n(-1)
+b(-1)
+K(-1)
+I(-1)
+DELTA(-1)
+w_H(-1)
+w_M(-1)
+i_d(-1)
+i_m(-1)
+i(-1)
+i_f(-1)
+Z(-1)
+xi(-1)
+
+The following variables appear with a lead and are therefore forward-looking variables:
+C_H(1)
+C_M(1)
+C_S(1)
+m(1)
+n(1)
+I(1)
+X_1(1)
+X_2(1)
+s(1)
+q(1)
+r(1)
+i_d(1)
+i_m(1)
+pi_var(1)
+pi_w_H(1)
+pi_w_M(1)
+V_H(1)
+V_M(1)
+V_S(1)
+
+The following variables do not appear with a lead or lag and are therefore purely static variables:
+L_H
+m_tilde_H
+L_M
+I_S
+d_S
+C
+H
+d
+Y
+L
+mc
+d_i
+d_k
+d_b
+T_H
+T_M
+T_S
+T
+f
+m_cB
+p_tilde
+w
+mu
+spread
+U_H
+INC_H
+NW_H
+U_M
+INC_M
+NW_M
+U_S
+INC_S
+NW_S
+W_TOT
+INC_TOT
+NW_TOT
+NWR
+GINI_W
+GINI_I
+WR
+
+
+
+Residuals of the static equations (ignoring MCP tags):
+Equation number  1: 1. H Budget Constraint                         :       0.000000
+Equation number  2: 2. H Wage Phillips Curve                       :       0.000000
+Equation number  3: 3. H Deposit Euler                             :       0.000000
+Equation number  4: 4. H RFA Deposit Euler                         :       0.000000
+Equation number  5: 5. Deposit CES Bundle                          :       0.000000
+Equation number  6: 6. M Budget Constraint                         :       0.000000
+Equation number  7: 7. M Collateral Constraint (binds in baseline) :       0.000005
+Equation number  8: 8. M Wage Phillips Curve                       :       0.000000
+Equation number  9: 9. M Housing Euler                             :      -0.000001
+Equation number 10: 10. M Mortgage Euler                           :       0.000000
+Equation number 11: 11. S Budget Constraint                        :       0.000000
+Equation number 12: 12. S Capital Accumulation                     :       0.000000
+Equation number 13: 13. S Housing Euler                            :      -0.000000
+Equation number 14: 14. S Capital Euler                            :       0.000000
+Equation number 15: 15. S Bond Euler                               :       0.000000
+Equation number 16: 16. H Wage Inflation                           :       0.000000
+Equation number 17: 17. M Wage Inflation                           :       0.000000
+Equation number 18: 18. H Labour Demand                            :       0.000000
+Equation number 19: 19. M Labour Demand                            :       0.000000
+Equation number 20: 20. Aggregate Production                       :       0.000000
+Equation number 21: 21. Marginal Cost                              :       0.000000
+Equation number 22: 22. Optimal Input Ratio                        :       0.000000
+Equation number 23: 23. Auxiliary Equation 1                       :       0.000000
+Equation number 24: 24. Auxiliary Equation 2                       :       0.000000
+Equation number 25: 25. Optimal Pricing Rule                       :       0.000000
+Equation number 26: 26. Aggregate Price Evolution                  :       0.000000
+Equation number 27: 27. Price Dispersion Evolution                 :       0.000000
+Equation number 28: 28. Tobins Q                                   :       0.000000
+Equation number 29: 29. Goods Producer Profits                     :       0.000000
+Equation number 30: 30. Capital Producer Profits                   :       0.000000
+Equation number 31: 31. Banks Balance Sheet                        :       0.000000
+Equation number 32: 32. Banks Reserve Requirement                  :       0.000000
+Equation number 33: 33. Banks Profit                               :       0.000000
+Equation number 34: 34. Mortgage Rate Setting                      :       0.000000
+Equation number 35: 35. Deposit Rate Setting                       :       0.000000
+Equation number 36: 36. Total Profits                              :       0.000000
+Equation number 37: 37. Government Budget Constraint               :       0.000000
+Equation number 38: 38. H Transfers                                :       0.000000
+Equation number 39: 39. M Transfers                                :       0.000000
+Equation number 40: 40. Taylor Rule                                :       0.000000
+Equation number 41: 41. Central Bank Lending Rule                  :       0.000000
+Equation number 42: 42. Central Bank Balance Sheet                 :       0.000000
+Equation number 43: 43. Aggregate Consumption                      :       0.000000
+Equation number 44: 44. Aggregate Labour                           :       0.000000
+Equation number 45: 45. Aggregate Deposits                         :       0.000000
+Equation number 46: 46. Aggregate Transfers                        :       0.000000
+Equation number 47: 47. Aggregate Housing                          :       0.000000
+Equation number 48: 48. Aggregate Mortgages                        :       0.000000
+Equation number 49: 49. Aggregate Investment                       :       0.000000
+Equation number 50: 50. Aggregate Capital                          :       0.000000
+Equation number 51: 51. Aggregate Bonds                            :       0.000000
+Equation number 52: 52. Aggregate Dividends                        :       0.000000
+Equation number 53: 53. Housing Market Clearing                    :       0.000000
+Equation number 54: Goods Market Clearing                          :       0.000000
+Equation number 55: 54. Technological Process                      :       0.000000
+Equation number 56: 55. Monetary Policy Shock                      :       0.000000
+Equation number 57: Interest Rate Spread                           :       0.000000
+Equation number 58: H Income                                       :       0.000000
+Equation number 59: H Net Wealth                                   :       0.000000
+Equation number 60: M Income                                       :       0.000000
+Equation number 61: M Net Wealth                                   :       0.000000
+Equation number 62: S Income                                       :       0.000000
+Equation number 63: S Net Wealth                                   :       0.000000
+Equation number 64: Total Income                                   :       0.000000
+Equation number 65: Total Net Wealth                               :       0.000000
+Equation number 66: Net Wealth Ratio                               :       0.000000
+Equation number 67: H Period Utility                               :       0.000000
+Equation number 68: M Period Utility                               :       0.000000
+Equation number 69: S Period Utility                               :       0.000000
+Equation number 70: H Welfare                                      :       0.000000
+Equation number 71: M Welfare                                      :       0.000000
+Equation number 72: S Welfare                                      :       0.000000
+Equation number 73: Total Welfare                                  :       0.000000
+Equation number 74: Income Gini Coefficient                        :       0.000000
+Equation number 75: Wealth Gini Coefficient                        :       0.000000
+
+
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 6.15081,	 time = 0.103
+Iter: 2,	 err. = 2.00152,	 time = 0.009
+Iter: 3,	 err. = 0.267248,	 time = 0.004
+Iter: 4,	 err. = 0.000182476,	 time = 0.004
+Iter: 5,	 err. = 2.9921e-08,	 time = 0.009
+
+Total time of simulation: 0.176.
+--------------------------------------------------------
+
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m00s
+Note: warning(s) encountered in MATLAB/Octave code
