@@ -1,223 +1,221 @@
 Starting Dynare (version 6.5).
 Calling Dynare with arguments: noclearall -Depsilon_c_val=3
 Starting preprocessing of the model file ... 
-Found 75 equation(s). 
+Found 74 equation(s). 
 Evaluating expressions... 
 Computing static model derivatives (order 1). 
 Normalizing the static model... 
 Finding the optimal block decomposition of the static model... 
 10 block(s) found: 
   9 recursive block(s) and 1 simultaneous block(s). 
-  the largest simultaneous block has 48 equation(s) 
-                                 and 48 feedback variable(s). 
+  the largest simultaneous block has 49 equation(s) 
+                                 and 49 feedback variable(s). 
 Computing dynamic model derivatives (order 1). 
 Normalizing the dynamic model... 
 Finding the optimal block decomposition of the dynamic model... 
 9 block(s) found: 
   8 recursive block(s) and 1 simultaneous block(s). 
-  the largest simultaneous block has 49 equation(s) 
+  the largest simultaneous block has 50 equation(s) 
                                  and 43 feedback variable(s). 
 Preprocessing completed. 
 Preprocessing time: 0h00m02s.
 
 STEADY-STATE RESULTS:
 
-C_H       		 0.143882
-L_H       		 0.324295
-m_H       		 0.0460477
-m_cH      		 6.02253e-07
-m_tilde_H 		 0.0460483
-C_M       		 0.406038
-L_M       		 0.332105
-H_M       		 1.62116
-n_M       		 0.86237
-C_S       		 11.6215
-H_S       		 4.35163
-b_S       		 49.0379
-K_S       		 402.698
-I_S       		 10.0675
-d_S       		 9.36058
-C         		 0.41333
+C_H       		 0.220446
+L_H       		 0.321414
+m_H       		 0.113383
+m_cH      		 2.06985e-05
+m_tilde_H 		 0.113403
+C_M       		 0.387788
+L_M       		 0.320608
+H_M       		 1.67256
+n_M       		 3.76402
+C_S       		 0.467014
+H_S       		 3.30977
+b_S       		 14.4891
+K_S       		 32.7661
+I_S       		 0.819152
+d_S       		 0.774031
+C         		 0.312039
 H         		 1
-d         		 0.0936058
-m         		 0.0184191
-n         		 0.508798
-b         		 0.490379
-Y         		 0.514004
-K         		 4.02698
-I         		 0.100675
-L         		 0.18648
+d         		 0.0774031
+m         		 0.0566917
+n         		 1.50561
+b         		 1.44891
+Y         		 0.393962
+K         		 3.27661
+I         		 0.0819152
+L         		 0.138782
 mc        		 0.833333
-d_i       		 0.0856674
+d_i       		 0.0656603
 d_k       		 0
-d_b       		 0.00793846
+d_b       		 0.0117428
 DELTA     		 1
-X_1       		 0.0419872
-X_2       		 0.0503847
-T_H       		 0.0575529
-T_M       		 0
-T_S       		 -2.30211
+X_1       		 4.01826
+X_2       		 4.82191
+T_H       		 0.0661338
+T_M       		 0.0893596
+T_S       		 -0.688107
 T         		 0
-f         		 0.000921195
-m_cB      		 0.000920954
+f         		 0.00142764
+m_cB      		 0.00141729
 p_tilde   		 1
-w         		 1.53896
-w_H       		 0.265486
-w_M       		 1.28889
-s         		 2.18209
+w         		 1.58494
+w_H       		 0.47905
+w_M       		 1.11488
+s         		 3.31267
 q         		 1
-r         		 0.035101
-i_d       		 0.00507238
-i_m       		 0.0255214
-i         		 0.010101
-i_f       		 0.0101471
+r         		 0.0330645
+i_d       		 0.00298604
+i_m       		 0.0156774
+i         		 0.00806452
+i_f       		 0.0130645
 pi_var    		 0
 pi_w_H    		 0
 pi_w_M    		 0
-mu        		 0.020269
+mu        		 0.0191984
 Z         		 1
 xi        		 0
-spread    		 0.00502863
-U_H       		 -5.99682
-V_H       		 -99.9471
-INC_H     		 0.143882
-NW_H      		 0.0460483
-U_M       		 -4.58583
-V_M       		 -152.861
-INC_M     		 0.428046
-NW_M      		 2.67515
-U_S       		 -0.591472
-V_S       		 -59.1472
-INC_S     		 21.6889
-NW_S      		 461.232
-W_TOT     		 -130.758
-INC_TOT   		 52.6989
-NW_TOT    		 620.907
-NWR       		 0.742835
-GINI_W    		 0.832764
-GINI_I    		 0.528819
+U_H       		 -4.93893
+V_H       		 -164.631
+INC_H     		 0.220446
+NW_H      		 0.113404
+U_M       		 -4.60165
+V_M       		 -230.083
+INC_M     		 0.446798
+NW_M      		 1.7766
+U_S       		 -3.47628
+V_S       		 -434.535
+INC_S     		 1.28617
+NW_S      		 58.2193
+W_TOT     		 -217.802
+INC_TOT   		 41.7559
+NW_TOT    		 658.928
+NWR       		 0.883547
+GINI_W    		 0.834029
+GINI_I    		 0.316437
 WR        		 0
 
 STEADY-STATE RESULTS:
 
-C_H       		 0.144261
-L_H       		 0.323802
-m_H       		 0.0208674
-m_cH      		 0.0269533
-m_tilde_H 		 0.0476911
-C_M       		 0.405614
-L_M       		 0.332516
-H_M       		 1.6203
-n_M       		 0.851072
-C_S       		 11.6681
-H_S       		 4.40241
-b_S       		 48.3004
-K_S       		 403.063
-I_S       		 10.0766
-d_S       		 9.41707
-C         		 0.413698
+C_H       		 0.220917
+L_H       		 0.320786
+m_H       		 0.0439293
+m_cH      		 0.0801861
+m_tilde_H 		 0.122314
+C_M       		 0.387626
+L_M       		 0.320594
+H_M       		 1.67934
+n_M       		 3.75407
+C_S       		 0.461126
+H_S       		 3.28266
+b_S       		 14.3957
+K_S       		 32.7428
+I_S       		 0.818569
+d_S       		 0.769536
+C         		 0.311621
 H         		 1
-d         		 0.0941707
-m         		 0.00834696
-n         		 0.502132
-b         		 0.483004
-Y         		 0.51447
-K         		 4.03063
-I         		 0.100766
-L         		 0.186649
+d         		 0.0769536
+m         		 0.0219647
+n         		 1.50163
+b         		 1.43957
+Y         		 0.393681
+K         		 3.27428
+I         		 0.0818569
+L         		 0.138684
 mc        		 0.833333
-d_i       		 0.085745
+d_i       		 0.0656135
 d_k       		 0
-d_b       		 0.00842574
+d_b       		 0.0113401
 DELTA     		 1
-X_1       		 0.0417735
-X_2       		 0.0501282
-T_H       		 0.0577046
-T_M       		 0
-T_S       		 -2.30818
+X_1       		 4.09255
+X_2       		 4.91106
+T_H       		 0.066275
+T_M       		 0.0892959
+T_S       		 -0.688559
 T         		 0
-f         		 0.0111987
-m_cB      		 0.000417348
+f         		 0.0406422
+m_cB      		 0.000549116
 p_tilde   		 1
-w         		 1.53896
-w_H       		 0.266131
-w_M       		 1.28846
-s         		 2.15736
+w         		 1.58494
+w_H       		 0.479646
+w_M       		 1.11413
+s         		 3.29057
 q         		 1
-r         		 0.035101
-i_d       		 0.00531647
-i_m       		 0.0268139
-i         		 0.010101
-i_f       		 0.0106609
+r         		 0.0330645
+i_d       		 0.00298604
+i_m       		 0.0156774
+i         		 0.00806452
+i_f       		 0.0130645
 pi_var    		 0
 pi_w_H    		 0
 pi_w_M    		 0
-mu        		 0.0154476
+mu        		 0.0192104
 Z         		 1
 xi        		 0
-spread    		 0.00478454
-U_H       		 -5.98635
-V_H       		 -99.7725
-INC_H     		 0.144261
-NW_H      		 0.0478207
-U_M       		 -4.58932
-V_M       		 -152.977
-INC_M     		 0.428434
-NW_M      		 2.6445
-U_S       		 -0.59027
-V_S       		 -59.027
-INC_S     		 21.7447
-NW_S      		 460.861
-W_TOT     		 -130.756
-INC_TOT   		 52.7928
-NW_TOT    		 618.799
-NWR       		 0.744767
-GINI_W    		 0.8338
-GINI_I    		 0.528922
+U_H       		 -4.92977
+V_H       		 -164.326
+INC_H     		 0.220917
+NW_H      		 0.124115
+U_M       		 -4.60071
+V_M       		 -230.035
+INC_M     		 0.44648
+NW_M      		 1.7719
+U_S       		 -3.49717
+V_S       		 -437.146
+INC_S     		 1.2797
+NW_S      		 57.9403
+W_TOT     		 -217.892
+INC_TOT   		 41.702
+NW_TOT    		 656.485
+NWR       		 0.882584
+GINI_W    		 0.832784
+GINI_I    		 0.315046
 WR        		 0
 
 EIGENVALUES:
          Modulus             Real        Imaginary
-       3.129e-18        3.129e-18                0
-       4.516e-17       -4.516e-17                0
-       5.189e-17        5.189e-17                0
-       5.398e-17       -5.398e-17                0
-       7.188e-17        7.188e-17                0
-       1.244e-16       -1.244e-16                0
-       3.825e-16       -3.825e-16                0
-        8.75e-16         8.75e-16                0
-       1.282e-15        1.282e-15                0
+       1.852e-17       -1.852e-17                0
+       4.032e-17       -4.032e-17                0
+       5.814e-17        5.814e-17                0
+       2.103e-16        2.103e-16                0
+       5.386e-16       -5.386e-16                0
+       6.515e-16        6.515e-16                0
+       9.041e-16       -9.041e-16                0
+       1.008e-15        1.008e-15                0
+       1.233e-15        1.233e-15                0
+          0.4968           0.4968                0
              0.5              0.5                0
-           0.645            0.645                0
-          0.6842           0.6806           0.0695
-          0.6842           0.6806          -0.0695
-           0.698            0.698                0
+          0.6998           0.6998                0
+          0.7355           0.7332          0.05746
+          0.7355           0.7332         -0.05746
             0.75             0.75                0
-          0.8139           0.8005           0.1475
-          0.8139           0.8005          -0.1475
-          0.8167           0.8167                0
-          0.8405           0.8405                0
+          0.7833           0.7833                0
+           0.812           0.8056           0.1011
+           0.812           0.8056          -0.1011
+          0.8291           0.8291                0
              0.9              0.9                0
-           0.964            0.964                0
-            1.01             1.01                0
+          0.9805           0.9805                0
+           1.008            1.008                0
+           1.009            1.009                0
            1.013            1.013                0
-           1.028            1.028                0
+            1.02             1.02                0
            1.031            1.031                0
-           1.064            1.064                0
-           1.127            1.104           0.2274
-           1.127            1.104          -0.2274
-           1.145            1.145          0.03582
-           1.145            1.145         -0.03582
-             1.3              1.3                0
-           1.327            1.327                0
-           1.347            1.347                0
-             1.4              1.4                0
-            1.52             1.52                0
-           1.568            1.568                0
-       4.506e+17       -4.506e+17                0
-       1.503e+18       -1.503e+18                0
-       4.925e+18        4.925e+18                0
-       1.845e+19        1.845e+19                0
+           1.131            1.131                0
+           1.132            1.113           0.2073
+           1.132            1.113          -0.2073
+           1.179            1.179                0
+           1.222            1.222                0
+           1.306            1.306                0
+           1.344            1.344                0
+           1.398            1.398                0
+           1.434            1.434                0
+           2.001            2.001                0
+       4.267e+16       -4.267e+16                0
+       1.569e+17        1.569e+17                0
+       2.105e+17        2.105e+17                0
+       9.014e+29        9.014e+29                0
 
 There are 19 eigenvalue(s) larger than 1 in modulus for 19 forward-looking variable(s)
 The rank condition is verified.
@@ -294,7 +292,6 @@ m_cB
 p_tilde
 w
 mu
-spread
 U_H
 INC_H
 NW_H
@@ -314,7 +311,7 @@ WR
 
 
 
-Residuals of the static equations (ignoring MCP tags):
+Residuals of the static equations:
 Equation number  1: 1. H Budget Constraint                         :       0.000000
 Equation number  2: 2. H Wage Phillips Curve                       :       0.000000
 Equation number  3: 3. H Deposit Euler                             :       0.000000
@@ -371,37 +368,35 @@ Equation number 53: 53. Housing Market Clearing                    :       0.000
 Equation number 54: Goods Market Clearing                          :       0.000000
 Equation number 55: 54. Technological Process                      :       0.000000
 Equation number 56: 55. Monetary Policy Shock                      :       0.000000
-Equation number 57: Interest Rate Spread                           :       0.000000
-Equation number 58: H Income                                       :       0.000000
-Equation number 59: H Net Wealth                                   :       0.000000
-Equation number 60: M Income                                       :       0.000000
-Equation number 61: M Net Wealth                                   :       0.000000
-Equation number 62: S Income                                       :       0.000000
-Equation number 63: S Net Wealth                                   :       0.000000
-Equation number 64: Total Income                                   :       0.000000
-Equation number 65: Total Net Wealth                               :       0.000000
-Equation number 66: Net Wealth Ratio                               :       0.000000
-Equation number 67: H Period Utility                               :       0.000000
-Equation number 68: M Period Utility                               :       0.000000
-Equation number 69: S Period Utility                               :       0.000000
-Equation number 70: H Welfare                                      :       0.000000
-Equation number 71: M Welfare                                      :       0.000000
-Equation number 72: S Welfare                                      :       0.000000
-Equation number 73: Total Welfare                                  :       0.000000
-Equation number 74: Income Gini Coefficient                        :       0.000000
-Equation number 75: Wealth Gini Coefficient                        :       0.000000
+Equation number 57: H Income                                       :       0.000000
+Equation number 58: H Net Wealth                                   :       0.000000
+Equation number 59: M Income                                       :       0.000000
+Equation number 60: M Net Wealth                                   :       0.000000
+Equation number 61: S Income                                       :       0.000000
+Equation number 62: S Net Wealth                                   :       0.000000
+Equation number 63: Total Income                                   :       0.000000
+Equation number 64: Total Net Wealth                               :       0.000000
+Equation number 65: Net Wealth Ratio                               :       0.000000
+Equation number 66: H Period Utility                               :       0.000000
+Equation number 67: M Period Utility                               :       0.000000
+Equation number 68: S Period Utility                               :       0.000000
+Equation number 69: H Welfare                                      :       0.000000
+Equation number 70: M Welfare                                      :       0.000000
+Equation number 71: S Welfare                                      :       0.000000
+Equation number 72: Total Welfare                                  :       0.000000
+Equation number 73: Income Gini Coefficient                        :       0.000000
+Equation number 74: Wealth Gini Coefficient                        :       0.000000
 
 
 
 --------------------------------------------------------
 MODEL SIMULATION:
 
-Iter: 1,	 err. = 0.62259,	 time = 0.082
-Iter: 2,	 err. = 0.0045705,	 time = 0.005
-Iter: 3,	 err. = 1.38552e-05,	 time = 0.004
-Iter: 4,	 err. = 5.91598e-11,	 time = 0.005
+Iter: 1,	 err. = 0.184127,	 time = 0.079
+Iter: 2,	 err. = 0.00255524,	 time = 0.003
+Iter: 3,	 err. = 1.87519e-06,	 time = 0.002
 
-Total time of simulation: 0.123.
+Total time of simulation: 0.094.
 --------------------------------------------------------
 
 
