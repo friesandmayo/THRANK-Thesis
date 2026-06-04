@@ -18,6 +18,6 @@ function g2 = static_g2(T, y, x, params, T_flag)
 if T_flag
     T = model_sensitivity.static_g2_tt(T, y, x, params);
 end
-g2 = sparse([],[],[],75,5625);
+g2 = sparse([],[],[],74,5476);
 
 end

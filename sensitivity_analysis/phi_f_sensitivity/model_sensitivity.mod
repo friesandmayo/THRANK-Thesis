@@ -1,5 +1,5 @@
-
 // Copy-paste baseline model file and just change the parameter block to the one here
+// And then just cut off verbatim block
 
 %--------------------------------------------------------------------------------
 % Variables
@@ -74,7 +74,6 @@ var
   xi       $\xi$               (long_name='Discretionary Monetary Policy')
 
   // Measurement additions (not present in algebra)
-  spread                       (long_name='Deposit Rate Spread') // check: problem is that the i should compare total avg rate in pre vs post RFA 
   U_H                          (long_name='H Period Utility')
   V_H                          (long_name='H Welfare')
   INC_H                        (long_name='H Income')      
@@ -117,8 +116,9 @@ parameters
   betta_H   $\beta_\mathrm{H}$      (long_name='H Discount Factor')
   betta_M   $\beta_\mathrm{M}$      (long_name='M Discount Factor')
   betta_S   $\beta_\mathrm{S}$      (long_name='S Discount Factor')
-  s_T       $s_T$                   (long_name='H Transfer Income Share')
-  sigma     $\sigma$                (long_name='Elasticity of substitution for Goods')
+  tau_H     $\tau_\mathrm{H}$       (long_name='H Income Share from Transfers')
+  tau_M     $\tau_\mathrm{M}$       (long_name='M Income Share from Transfers')
+  sigma     $\sigma$                (long_name='Risk Aversion')
   psi       $\psi$                  (long_name='Elasticity of substitution for Money')
   eta       $\eta$                  (long_name='Elasticity of substitution for Housing')
   varphi    $\varphi$               (long_name='Elasticity of substitution for Labour') 
@@ -162,25 +162,25 @@ parameters
     @#define theta_val = 0.75
 @#endif
 @#ifndef Gamma_val
-    @#define Gamma_val = 0.25
+    @#define Gamma_val = 0.69
 @#endif
 @#ifndef lambda_H_val
-    @#define lambda_H_val = 0.40
+    @#define lambda_H_val = 0.50
 @#endif
 @#ifndef betta_H_val
-    @#define betta_H_val = 0.94
+    @#define betta_H_val = 0.97
 @#endif
 @#ifndef lambda_M_val
-    @#define lambda_M_val = 0.59
+    @#define lambda_M_val = 0.40
 @#endif
 @#ifndef betta_M_val
-    @#define betta_M_val = 0.97
+    @#define betta_M_val = 0.98
 @#endif
 @#ifndef lambda_S_val
-    @#define lambda_S_val = 0.01
+    @#define lambda_S_val = 0.10
 @#endif
 @#ifndef betta_S_val
-    @#define betta_S_val = 0.99
+    @#define betta_S_val = 0.992
 @#endif
 @#ifndef sigma_val
     @#define sigma_val = 1.50
@@ -210,13 +210,13 @@ parameters
     @#define chi_val = 12.00
 @#endif
 @#ifndef epsilon_w_val
-    @#define epsilon_w_val = 5.00
+    @#define epsilon_w_val = 6.00
 @#endif
 @#ifndef PSI_val
     @#define PSI_val = 0.01
 @#endif
 @#ifndef alpha_L_val
-    @#define alpha_L_val = 0.12
+    @#define alpha_L_val = 0.35
 @#endif
 @#ifndef epsilon_c_val
     @#define epsilon_c_val = 5.00
@@ -228,16 +228,19 @@ parameters
     @#define alppha_val = 0.33
 @#endif
 @#ifndef THETA_S_val
-    @#define THETA_S_val = 0.005
+    @#define THETA_S_val = 0.50
 @#endif
 @#ifndef H_bar_val
     @#define H_bar_val = 1.00
 @#endif
-@#ifndef s_T_val
-    @#define s_T_val = 0.40
+@#ifndef tau_H_val
+    @#define tau_H_val = 0.30
+@#endif
+@#ifndef tau_M_val
+    @#define tau_M_val = 0.20
 @#endif
 @#ifndef omega_val
-    @#define omega_val = 0.05
+    @#define omega_val = 0.025
 @#endif
 @#ifndef kappa_m_val
     @#define kappa_m_val = 10
@@ -246,16 +249,16 @@ parameters
     @#define kappa_d_val = 10
 @#endif
 @#ifndef epsilon_m_val
-    @#define epsilon_m_val = 1.66
+    @#define epsilon_m_val = 6
 @#endif
 @#ifndef epsilon_d_val
-    @#define epsilon_d_val = -1
+    @#define epsilon_d_val = -0.3
 @#endif
 @#ifndef phi_pi_val
     @#define phi_pi_val = 1.50
 @#endif
 @#ifndef phi_f_val
-    @#define phi_f_val = 0.05
+    @#define phi_f_val = 0.00
 @#endif
 @#ifndef rho_z_val
     @#define rho_z_val = 0.90
@@ -282,9 +285,10 @@ PSI        = @{PSI_val};         alpha_L    = @{alpha_L_val}; // set to target S
 epsilon_c  = @{epsilon_c_val};   Gamma      = @{Gamma_val}; 
 THETA_M    = @{THETA_M_val};     alppha     = @{alppha_val}; 
 THETA_S    = @{THETA_S_val};     H_bar      = @{H_bar_val}; 
-s_T        = @{s_T_val};         theta      = @{theta_val};  
+tau_H      = @{tau_H_val};       theta      = @{theta_val};  
+tau_M      = @{tau_M_val}; 
 
-omega      = @{omega_val}; // check calibrations
+omega      = @{omega_val}; 
 kappa_m    = @{kappa_m_val};
 kappa_d    = @{kappa_d_val};
 epsilon_m  = @{epsilon_m_val};
@@ -300,8 +304,6 @@ rho_i      = @{rho_i_val};
 
 sigma_z    = 0.01; 
 sigma_xi   = 0.0025;  
-
-
 
 %--------------------------------------------------------------------------------
 % Model Block
@@ -331,7 +333,7 @@ model;
   [name='6. M Budget Constraint']
   C_M + s*H_M + (1+i_m(-1))/(1+pi_var)*n_M(-1) = w_M*L_M + s*H_M(-1) + n_M + T_M;
 
-  [name='7. M Collateral Constraint (binds in baseline)' , mcp='mu > 0'] //check
+  [name='7. M Collateral Constraint (binds in baseline)'] 
   n_M = Gamma * s(+1)*(1+pi_var(+1)) * H_M / (1+i_m); 
 
   [name='8. M Wage Phillips Curve']
@@ -442,17 +444,17 @@ model;
   T = 0;
 
   [name='38. H Transfers'] //check ss command
-  //T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1));   
-  T_H = (s_T / (1 - s_T)) * (steady_state(w_H)*steady_state(L_H) + steady_state(i_d)*steady_state(m_H) + steady_state(i)*steady_state(m_cH));
+  //T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1));   
+  T_H = (tau_H / (1 - tau_H)) * (steady_state(w_H)*steady_state(L_H) + steady_state(i_d)*steady_state(m_H) + steady_state(i)*steady_state(m_cH));
 
   [name='39. M Transfers']
-  T_M = 0;
+  T_M = (tau_M / (1 - tau_M)) * (steady_state(w_M)*steady_state(L_M));
 
   [name='40. Taylor Rule'] 
   log( (1+i) / (1+i_bar) ) = rho_i*log( (1+i(-1)) / (1+i_bar) ) + (1-rho_i)*phi_pi*log(1+pi_var) + xi; 
 
   [name='41. Central Bank Lending Rule']
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
 
   [name='42. Central Bank Balance Sheet'] 
   f = lambda_H*m_cH + m_cB;
@@ -505,15 +507,12 @@ model;
 
   // ---------- Wealth & Income ----------
 
-  [name='Interest Rate Spread']
-  spread = i - i_d;
-
   [name='H Income']
   INC_H = w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1) + T_H;
   [name='H Net Wealth']
   NW_H = m_H + m_cH;
 
-  [name='M Income']
+  [name='M Income']         // check everything in this block. should i measure NET wealth? 
   INC_M = w_M*L_M + T_M;
   [name='M Net Wealth']
   NW_M = s*H_M - n_M;
@@ -578,7 +577,6 @@ initval;
   // Analytically Solvable
   d_k = 0;
   T = 0;
-  T_M = 0;
   i = i_bar;
   H = H_bar;
   r = 1/betta_S - 1 + delta;
@@ -586,16 +584,15 @@ initval;
   w = (1-alppha)*( mc*(r/alppha)^(-alppha) )^(1/(1-alppha));
 
   // Guesses
-  L_H = 0.23;
+  L_H = 0.33;
   L_M = 0.35;
   H_S = H; 
   f = 0.02;
 
   // Rates
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
-  spread = i - i_d;
 
   // H 
   L = ((lambda_H*L_H)^alpha_L) * ((lambda_M*L_M)^(1-alpha_L));
@@ -606,9 +603,10 @@ initval;
   m_H = m_tilde_H^(1-psi*epsilon_c) * varpi * ( PSI / ( (1 - betta_H*(1+i_d))*C_H^(-sigma) ) )^epsilon_c;
   m_cH = m_tilde_H^(1-psi*epsilon_c) * (1-varpi) * ( PSI / ( (1 - betta_H*(1+i))*C_H^(-sigma) ) )^epsilon_c; 
   m = lambda_H*m_H;
-  T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d*m_H + i*m_cH);
+  T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d*m_H + i*m_cH);
   
   // M
+  T_M = (tau_M / (1 - tau_M)) * (w_M*L_M);
   H_M = (H - lambda_S*H_S)/lambda_M; 
   C_M = ( (w_M * (epsilon_w-1)/epsilon_w) / (chi * L_M^varphi) )^(1/sigma);
   n_M = 1/i_m * (w_M*L_M + T_M - C_M);
@@ -630,7 +628,7 @@ initval;
   WR = - Y + C + I ;
 
   // S
-  T_S = -lambda_H/lambda_S*T_H;
+  T_S = -lambda_H/lambda_S*T_H; // (check) update for T_M
   b_S = 1/(1-i+i_f)*(C_S + I_S - r*K_S - T_S - 1/lambda_S*(d_i + (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m));
   b = lambda_S*b_S;
   d_b = (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m - (i-i_f)*b;
@@ -682,7 +680,6 @@ endval;
   // Analytically Solvable
   d_k = 0;
   T = 0;
-  T_M = 0;
   i = i_bar;
   H = H_bar;
   r = 1/betta_S - 1 + delta;
@@ -690,16 +687,15 @@ endval;
   w = (1-alppha)*( mc*(r/alppha)^(-alppha) )^(1/(1-alppha));
 
   // Guesses
-  L_H = 0.23;
+  L_H = 0.33;
   L_M = 0.35;
   H_S = H; 
   f = 0.02;
 
   // Rates
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
-  spread = i - i_d;
 
   // H 
   L = ((lambda_H*L_H)^alpha_L) * ((lambda_M*L_M)^(1-alpha_L));
@@ -710,9 +706,10 @@ endval;
   m_H = m_tilde_H^(1-psi*epsilon_c) * varpi * ( PSI / ( (1 - betta_H*(1+i_d))*C_H^(-sigma) ) )^epsilon_c;
   m_cH = m_tilde_H^(1-psi*epsilon_c) * (1-varpi) * ( PSI / ( (1 - betta_H*(1+i))*C_H^(-sigma) ) )^epsilon_c; 
   m = lambda_H*m_H;
-  T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d*m_H + i*m_cH);
+  T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d*m_H + i*m_cH);
   
   // M
+  T_M = (tau_M / (1 - tau_M)) * (w_M*L_M);
   H_M = (H - lambda_S*H_S)/lambda_M; 
   C_M = ( (w_M * (epsilon_w-1)/epsilon_w) / (chi * L_M^varphi) )^(1/sigma);
   n_M = 1/i_m * (w_M*L_M + T_M - C_M);
@@ -787,10 +784,28 @@ write_latex_definitions;
 % Perfect Foresight Simulation 
 %--------------------------------------------------------------------------------
 
-perfect_foresight_setup(periods=100);
+perfect_foresight_setup(periods=50);
 perfect_foresight_solver(maxit=15);
 
-// check: add lmmcp if want to use the mcp constraint for the borrowing constraint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

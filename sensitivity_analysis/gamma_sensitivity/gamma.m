@@ -4,8 +4,8 @@ clear all; close all; clc;
 % --- Sensitivity Analysis Configuration ---
 param_macro_name   = 'Gamma_val'; % Must match the @#define variable in the .mod file
 param_display_name = 'Gamma';     
-val_base           = 0.25;        % Baseline value
-val_alt            = 0.75;         % Alternative value
+val_base           = 0.69;        % Baseline value
+val_alt            = 0.40;         % Alternative value
 
 %% ------------- 1. Run Scenarios -------------
 
@@ -71,12 +71,16 @@ graph_dir = 'model_sensitivity/graphs';
 if ~exist(graph_dir, 'dir')
     mkdir(graph_dir);
 end
+param_note = sprintf('%s: Base = %g | Alt = %g', param_display_name, val_base, val_alt);
+add_footer = @() annotation('textbox', [0, 0.01, 1, 0.04], 'String', param_note, ...
+    'EdgeColor', 'none', 'HorizontalAlignment', 'center', ...
+    'FontSize', 12, 'FontWeight', 'bold', 'Interpreter', 'none');
 
 % --- CEV Figure ---
 cev_fig = figure('Name', 'Consumption Equivalent Variation', 'Position', [150, 150, 800, 500]);
 plot(time_axis, CEV_H_base * 100, 'b-', time_axis, CEV_M_base * 100, 'r-', time_axis, CEV_S_base * 100, 'g-', 'LineWidth', 2); hold on;
 plot(time_axis, CEV_H_alt * 100,  'b--', time_axis, CEV_M_alt * 100,  'r--', time_axis, CEV_S_alt * 100,  'g--', 'LineWidth', 1.5);
-title('Consumption Equivalent Variation over Time');
+title({'Consumption Equivalent Variation over Time', param_note}, 'Interpreter', 'none');
 xlabel('Period'); ylabel('CEV (%)'); grid on; xlim([1 options_.periods]);
 legend('H (Base)', 'M (Base)', 'S (Base)', 'H (Alt)', 'M (Alt)', 'S (Alt)', 'Location', 'best');
 exportgraphics(cev_fig, fullfile(graph_dir, 'Fig4_CEV_Dynamics.pdf'), 'ContentType', 'vector');
@@ -84,6 +88,7 @@ exportgraphics(cev_fig, fullfile(graph_dir, 'Fig4_CEV_Dynamics.pdf'), 'ContentTy
 
 % --- FIGURE 1: Macro & Household Dynamics ---
 fig1 = figure('Name', 'Macro & Household Dynamics', 'Position', [100, 100, 1800, 1200]);
+title({'Macro & Household Dynamics', param_note}, 'Interpreter', 'none');
 
 subplot(3,3,1); hold on; grid on;
 plot(time_axis, get_dev('C_H', oo_base), 'b-', time_axis, get_dev('C_M', oo_base), 'r-', time_axis, get_dev('C_S', oo_base), 'g-', 'LineWidth', 2);
@@ -139,11 +144,14 @@ plot(time_axis, get_pp('pi_var', oo_alt), 'k--', time_axis, get_pp('pi_w_H', oo_
 title('Inflation'); xlabel('Period'); ylabel('Ann. pp dev'); xlim([1 options_.periods]);
 legend('pi (Base)', 'pi_w_H (Base)', 'pi_w_M (Base)', 'pi (Alt)', 'pi_w_H (Alt)', 'pi_w_M (Alt)', 'Location', 'best');
 
+add_footer();
+
 exportgraphics(fig1, fullfile(graph_dir, 'Fig1_HH_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % --- FIGURE 2: Financial, Housing & Public Sector ---
 fig2 = figure('Name', 'Financial, Housing & Public Sector', 'Position', [150, 150, 1800, 1200]);
+title({'Financial, Housing & Public Sector', param_note}, 'Interpreter', 'none');
 
 subplot(3,3,1); hold on; grid on;
 plot(time_axis, get_dev('m_H', oo_base), 'b-', time_axis, get_dev('m_cH', oo_base), 'r-', 'LineWidth', 2);
@@ -181,11 +189,14 @@ plot(time_axis, get_lvl('T_H', oo_alt), 'b--', time_axis, get_lvl('T_M', oo_alt)
 title('Transfers'); xlabel('Period'); ylabel('Levels'); xlim([1 options_.periods]);
 legend('T_H (Base)', 'T_M (Base)', 'T_S (Base)', 'T_H (Alt)', 'T_M (Alt)', 'T_S (Alt)', 'Location', 'best');
 
+add_footer();
+
 exportgraphics(fig2, fullfile(graph_dir, 'Fig2_FHP_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % --- FIGURE 3: Welfare, Inequality & Shocks ---
 fig3 = figure('Name', 'Welfare, Inequality & Shocks', 'Position', [200, 200, 1000, 600]);
+title({'Welfare, Inequality & Shocks', param_note}, 'Interpreter', 'none');
 
 subplot(2,2,1); hold on; grid on;
 plot(time_axis, get_lvl('U_H', oo_base), 'b-', time_axis, get_lvl('U_M', oo_base), 'r-', time_axis, get_lvl('U_S', oo_base), 'g-', 'LineWidth', 2);
@@ -211,11 +222,14 @@ plot(time_axis, get_lvl('GINI_W', oo_alt), 'r--', 'LineWidth', 1.5);
 title('Wealth Inequality'); xlabel('Period'); ylabel('Gini Coefficient'); xlim([1 options_.periods]);
 legend('Wealth Gini (Base)', 'Wealth Gini (Alt)', 'Location', 'best');
 
+add_footer();
+
 exportgraphics(fig3, fullfile(graph_dir, 'Fig3_WI_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % --- FIGURE 5: Banking ---
 fig5 = figure('Name', 'Banking', 'Position', [200, 200, 1000, 600]);
+title({'Welfare, Banking', param_note}, 'Interpreter', 'none');
 
 subplot(2,2,1); hold on; grid on;
 plot(time_axis, get_dev('m', oo_base), 'b-', 'LineWidth', 2);
@@ -234,6 +248,8 @@ plot(time_axis, get_dev('m_cB', oo_base), 'b-', time_axis, get_dev('f', oo_base)
 plot(time_axis, get_dev('m_cB', oo_alt), 'b--', time_axis, get_dev('f', oo_alt), 'r--', 'LineWidth', 1.5);
 title('Bank Reserves & CB Loans'); xlabel('Period'); ylabel('% Dev'); xlim([1 options_.periods]);
 legend('m_cB (Base)', 'f (Base)', 'm_cB (Alt)', 'f (Alt)', 'Location', 'best');
+
+add_footer();
 
 exportgraphics(fig5, fullfile(graph_dir, 'Fig5_Bank_Dynamics.pdf'), 'ContentType', 'vector');
 
@@ -259,11 +275,7 @@ SS_Table = table(var_names, init_SS_base, final_SS_base, init_SS_alt, final_SS_a
     'VariableNames', {'Variable', 'Base_Init_SS', 'Base_Final_SS', 'Alt_Init_SS', 'Alt_Final_SS'});
 
 % --- Export to Excel ---
-% We create a dynamic filename so that if you test a new parameter (e.g., 'gamma'), 
-% it won't overwrite your 'theta' results.
 excel_filename = fullfile(graph_dir, sprintf('SS_Comparison_%s.xlsx', param_macro_name));
-
-% Write the table to the Excel file
 writetable(SS_Table, excel_filename);
 
 

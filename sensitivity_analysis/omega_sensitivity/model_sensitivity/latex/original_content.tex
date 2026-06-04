@@ -20,7 +20,7 @@
 \end{dmath}
 % Equation 6
 \begin{dmath}
-{C_\mathrm{M}}_{t}+{s}_{t}\, {H_\mathrm{M}}_{t}+\frac{1+{i^m}_{t-1}}{1+{\pi}_{t}}\, {n_\mathrm{M}}_{t-1}={w_\mathrm{M}}_{t}\, {L_\mathrm{M}}_{t}+{s}_{t}\, {H_\mathrm{M}}_{t-1}+{n_\mathrm{M}}_{t}
+{C_\mathrm{M}}_{t}+{s}_{t}\, {H_\mathrm{M}}_{t}+\frac{1+{i^m}_{t-1}}{1+{\pi}_{t}}\, {n_\mathrm{M}}_{t-1}={w_\mathrm{M}}_{t}\, {L_\mathrm{M}}_{t}+{s}_{t}\, {H_\mathrm{M}}_{t-1}+{n_\mathrm{M}}_{t}+{T_\mathrm{M}}_{t}
 \end{dmath}
 % Equation 7
 \begin{dmath}
@@ -148,11 +148,11 @@
 \end{dmath}
 % Equation 38
 \begin{dmath}
-{T_\mathrm{H}}_{t}=\frac{{s_T}}{1-{s_T}}\, \left((\bar{w_\mathrm{H}})\, (\bar{L_\mathrm{H}})+(\bar{i^d})\, (\bar{m_\mathrm{H}})+(\bar{i})\, (\bar{m^c_\mathrm{H}})\right)
+{T_\mathrm{H}}_{t}=\frac{{\tau_\mathrm{H}}}{1-{\tau_\mathrm{H}}}\, \left((\bar{w_\mathrm{H}})\, (\bar{L_\mathrm{H}})+(\bar{i^d})\, (\bar{m_\mathrm{H}})+(\bar{i})\, (\bar{m^c_\mathrm{H}})\right)
 \end{dmath}
 % Equation 39
 \begin{dmath}
-{T_\mathrm{M}}_{t}=0
+{T_\mathrm{M}}_{t}=\frac{{\tau_\mathrm{M}}}{1-{\tau_\mathrm{M}}}\, (\bar{w_\mathrm{M}})\, (\bar{L_\mathrm{M}})
 \end{dmath}
 % Equation 40
 \begin{dmath}
@@ -160,7 +160,7 @@
 \end{dmath}
 % Equation 41
 \begin{dmath}
-{i^f}_{t}={i}_{t}+{f}_{t}\, {\phi_f}
+{i^f}_{t}={i}_{t}+0.005+{f}_{t}\, {\phi_f}
 \end{dmath}
 % Equation 42
 \begin{dmath}
@@ -180,7 +180,7 @@
 \end{dmath}
 % Equation 46
 \begin{dmath}
-0={T_\mathrm{H}}_{t}\, {\lambda_\mathrm{H}}+{T_\mathrm{S}}_{t}\, {\lambda_\mathrm{S}}
+0={T_\mathrm{H}}_{t}\, {\lambda_\mathrm{H}}+{T_\mathrm{M}}_{t}\, {\lambda_\mathrm{M}}+{T_\mathrm{S}}_{t}\, {\lambda_\mathrm{S}}
 \end{dmath}
 % Equation 47
 \begin{dmath}
@@ -224,77 +224,73 @@
 \end{dmath}
 % Equation 57
 \begin{dmath}
-{spread}_{t}={i}_{t}-{i^d}_{t}
+{INC\_H}_{t}={T_\mathrm{H}}_{t}+{w_\mathrm{H}}_{t}\, {L_\mathrm{H}}_{t}+{m_\mathrm{H}}_{t-1}\, \frac{{i^d}_{t-1}}{1+{\pi}_{t}}+{m^c_\mathrm{H}}_{t-1}\, \frac{{i}_{t-1}}{1+{\pi}_{t}}
 \end{dmath}
 % Equation 58
 \begin{dmath}
-{INC\_H}_{t}={T_\mathrm{H}}_{t}+{w_\mathrm{H}}_{t}\, {L_\mathrm{H}}_{t}+{m_\mathrm{H}}_{t-1}\, \frac{{i^d}_{t-1}}{1+{\pi}_{t}}+{m^c_\mathrm{H}}_{t-1}\, \frac{{i}_{t-1}}{1+{\pi}_{t}}
+{NW\_H}_{t}={m_\mathrm{H}}_{t}+{m^c_\mathrm{H}}_{t}
 \end{dmath}
 % Equation 59
 \begin{dmath}
-{NW\_H}_{t}={m_\mathrm{H}}_{t}+{m^c_\mathrm{H}}_{t}
+{INC\_M}_{t}={w_\mathrm{M}}_{t}\, {L_\mathrm{M}}_{t}+{T_\mathrm{M}}_{t}
 \end{dmath}
 % Equation 60
 \begin{dmath}
-{INC\_M}_{t}={w_\mathrm{M}}_{t}\, {L_\mathrm{M}}_{t}
+{NW\_M}_{t}={s}_{t}\, {H_\mathrm{M}}_{t}-{n_\mathrm{M}}_{t}
 \end{dmath}
 % Equation 61
 \begin{dmath}
-{NW\_M}_{t}={s}_{t}\, {H_\mathrm{M}}_{t}-{n_\mathrm{M}}_{t}
+{INC\_S}_{t}={T_\mathrm{S}}_{t}+{d_\mathrm{S}}_{t}+{r}_{t}\, {K_\mathrm{S}}_{t-1}+{b_\mathrm{S}}_{t-1}\, \frac{{i}_{t-1}}{1+{\pi}_{t}}
 \end{dmath}
 % Equation 62
 \begin{dmath}
-{INC\_S}_{t}={T_\mathrm{S}}_{t}+{d_\mathrm{S}}_{t}+{r}_{t}\, {K_\mathrm{S}}_{t-1}+{b_\mathrm{S}}_{t-1}\, \frac{{i}_{t-1}}{1+{\pi}_{t}}
+{NW\_S}_{t}={b_\mathrm{S}}_{t}+{s}_{t}\, {H_\mathrm{S}}_{t}+{q}_{t}\, {K_\mathrm{S}}_{t}
 \end{dmath}
 % Equation 63
 \begin{dmath}
-{NW\_S}_{t}={b_\mathrm{S}}_{t}+{s}_{t}\, {H_\mathrm{S}}_{t}+{q}_{t}\, {K_\mathrm{S}}_{t}
+{INC\_TOT}_{t}=100\, \left({\lambda_\mathrm{H}}\, {INC\_H}_{t}+{\lambda_\mathrm{M}}\, {INC\_M}_{t}+{\lambda_\mathrm{S}}\, {INC\_S}_{t}\right)
 \end{dmath}
 % Equation 64
 \begin{dmath}
-{INC\_TOT}_{t}=100\, \left({\lambda_\mathrm{H}}\, {INC\_H}_{t}+{\lambda_\mathrm{M}}\, {INC\_M}_{t}+{\lambda_\mathrm{S}}\, {INC\_S}_{t}\right)
+{NW\_TOT}_{t}=100\, \left({\lambda_\mathrm{H}}\, {NW\_H}_{t}+{\lambda_\mathrm{M}}\, {NW\_M}_{t}+{\lambda_\mathrm{S}}\, {NW\_S}_{t}\right)
 \end{dmath}
 % Equation 65
 \begin{dmath}
-{NW\_TOT}_{t}=100\, \left({\lambda_\mathrm{H}}\, {NW\_H}_{t}+{\lambda_\mathrm{M}}\, {NW\_M}_{t}+{\lambda_\mathrm{S}}\, {NW\_S}_{t}\right)
+{NWR}_{t}=\frac{{\lambda_\mathrm{S}}\, {NW\_S}_{t}\, 100}{{NW\_TOT}_{t}}
 \end{dmath}
 % Equation 66
 \begin{dmath}
-{NWR}_{t}=\frac{{\lambda_\mathrm{S}}\, {NW\_S}_{t}\, 100}{{NW\_TOT}_{t}}
+{U\_H}_{t}=\frac{{C_\mathrm{H}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Psi}\, {\widetilde{m}_\mathrm{H}}_{t}^{1-{\psi}}}{1-{\psi}}-\frac{{\chi}\, {L_\mathrm{H}}_{t}^{1+{\varphi}}}{1+{\varphi}}
 \end{dmath}
 % Equation 67
 \begin{dmath}
-{U\_H}_{t}=\frac{{C_\mathrm{H}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Psi}\, {\widetilde{m}_\mathrm{H}}_{t}^{1-{\psi}}}{1-{\psi}}-\frac{{\chi}\, {L_\mathrm{H}}_{t}^{1+{\varphi}}}{1+{\varphi}}
+{U\_M}_{t}=\frac{{C_\mathrm{M}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Theta_\mathrm{M}}\, {H_\mathrm{M}}_{t}^{1-{\eta}}}{1-{\eta}}-\frac{{\chi}\, {L_\mathrm{M}}_{t}^{1+{\varphi}}}{1+{\varphi}}
 \end{dmath}
 % Equation 68
 \begin{dmath}
-{U\_M}_{t}=\frac{{C_\mathrm{M}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Theta_\mathrm{M}}\, {H_\mathrm{M}}_{t}^{1-{\eta}}}{1-{\eta}}-\frac{{\chi}\, {L_\mathrm{M}}_{t}^{1+{\varphi}}}{1+{\varphi}}
+{U\_S}_{t}=\frac{{C_\mathrm{S}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Theta_\mathrm{S}}\, {H_\mathrm{S}}_{t}^{1-{\eta}}}{1-{\eta}}
 \end{dmath}
 % Equation 69
 \begin{dmath}
-{U\_S}_{t}=\frac{{C_\mathrm{S}}_{t}^{1-{\sigma}}}{1-{\sigma}}+\frac{{\Theta_\mathrm{S}}\, {H_\mathrm{S}}_{t}^{1-{\eta}}}{1-{\eta}}
+{V\_H}_{t}={U\_H}_{t}+{\beta_\mathrm{H}}\, {V\_H}_{t+1}
 \end{dmath}
 % Equation 70
 \begin{dmath}
-{V\_H}_{t}={U\_H}_{t}+{\beta_\mathrm{H}}\, {V\_H}_{t+1}
+{V\_M}_{t}={U\_M}_{t}+{\beta_\mathrm{M}}\, {V\_M}_{t+1}
 \end{dmath}
 % Equation 71
 \begin{dmath}
-{V\_M}_{t}={U\_M}_{t}+{\beta_\mathrm{M}}\, {V\_M}_{t+1}
+{V\_S}_{t}={U\_S}_{t}+{\beta_\mathrm{S}}\, {V\_S}_{t+1}
 \end{dmath}
 % Equation 72
 \begin{dmath}
-{V\_S}_{t}={U\_S}_{t}+{\beta_\mathrm{S}}\, {V\_S}_{t+1}
+{W\_TOT}_{t}={\lambda_\mathrm{H}}\, {V\_H}_{t}+{\lambda_\mathrm{M}}\, {V\_M}_{t}+{\lambda_\mathrm{S}}\, {V\_S}_{t}
 \end{dmath}
 % Equation 73
 \begin{dmath}
-{W\_TOT}_{t}={\lambda_\mathrm{H}}\, {V\_H}_{t}+{\lambda_\mathrm{M}}\, {V\_M}_{t}+{\lambda_\mathrm{S}}\, {V\_S}_{t}
-\end{dmath}
-% Equation 74
-\begin{dmath}
 {GINI\_I}_{t}=\frac{{\lambda_\mathrm{H}}\, {\lambda_\mathrm{M}}\, \left({INC\_M}_{t}-{INC\_H}_{t}\right)+{\lambda_\mathrm{H}}\, {\lambda_\mathrm{S}}\, \left({INC\_S}_{t}-{INC\_H}_{t}\right)+{\lambda_\mathrm{M}}\, {\lambda_\mathrm{S}}\, \left({INC\_S}_{t}-{INC\_M}_{t}\right)}{{\lambda_\mathrm{H}}\, {INC\_H}_{t}+{\lambda_\mathrm{M}}\, {INC\_M}_{t}+{\lambda_\mathrm{S}}\, {INC\_S}_{t}}
 \end{dmath}
-% Equation 75
+% Equation 74
 \begin{dmath}
 {GINI\_W}_{t}=\frac{{\lambda_\mathrm{H}}\, {\lambda_\mathrm{M}}\, \left({NW\_M}_{t}-{NW\_H}_{t}\right)+{\lambda_\mathrm{H}}\, {\lambda_\mathrm{S}}\, \left({NW\_S}_{t}-{NW\_H}_{t}\right)+{\lambda_\mathrm{M}}\, {\lambda_\mathrm{S}}\, \left({NW\_S}_{t}-{NW\_M}_{t}\right)}{{\lambda_\mathrm{H}}\, {NW\_H}_{t}+{\lambda_\mathrm{M}}\, {NW\_M}_{t}+{\lambda_\mathrm{S}}\, {NW\_S}_{t}}
 \end{dmath}
