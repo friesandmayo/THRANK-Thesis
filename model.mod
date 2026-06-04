@@ -1,3 +1,10 @@
+/*
+* This file implements the New Keynesian DSGE model described in my thesis 
+* WARNING: Multiple steps are WIP. Use CTRL+F and search for "check"
+*/
+
+
+
 %--------------------------------------------------------------------------------
 % Variables
 %--------------------------------------------------------------------------------
@@ -89,6 +96,7 @@ var
   NWR                          (long_name='Net Wealth Ratio')
   GINI_W                       (long_name='Gini Coefficient for Wealth')
   GINI_I                       (long_name='Gini Coefficient for Income')
+  WR                           (long_name='Walras Residual')
 ;
 
 %--------------------------------------------------------------------------------
@@ -112,7 +120,8 @@ parameters
   betta_H   $\beta_\mathrm{H}$      (long_name='H Discount Factor')
   betta_M   $\beta_\mathrm{M}$      (long_name='M Discount Factor')
   betta_S   $\beta_\mathrm{S}$      (long_name='S Discount Factor')
-  s_T       $s_T$                   (long_name='H Transfer Income Share')
+  tau_H     $\tau_\mathrm{H}$       (long_name='H Income Share from Transfers')
+  tau_M     $\tau_\mathrm{M}$       (long_name='M Income Share from Transfers')
   sigma     $\sigma$                (long_name='Risk Aversion')
   psi       $\psi$                  (long_name='Elasticity of substitution for Money')
   eta       $\eta$                  (long_name='Elasticity of substitution for Housing')
@@ -151,30 +160,26 @@ parameters
 % Calibration
 %--------------------------------------------------------------------------------
 
-lambda_H   = 0.40;    betta_H    = 0.94; 
-lambda_M   = 0.59;    betta_M    = 0.97;  
-lambda_S   = 0.01;    betta_S    = 0.99;   
+lambda_H   = 0.50;    betta_H    = 0.97; 
+lambda_M   = 0.40;    betta_M    = 0.98;  
+lambda_S   = 0.10;    betta_S    = 0.992;   
 
 sigma      = 1.50;    delta      = 0.025;
 psi        = 1.50;    kappa_y    = 3.00; 
 eta        = 1.50;    epsilon_y  = 6.00;  
 varphi     = 1.00;    kappa_w    = 50.00; 
-chi        = 12.00;   epsilon_w  = 5.00;
-PSI        = 0.01;    alpha_L    = 0.12; // set to target SS labour  
-epsilon_c  = 5.00;    Gamma      = 0.25; 
+chi        = 12.00;   epsilon_w  = 6.00;
+PSI        = 0.01;    alpha_L    = 0.35; 
+epsilon_c  = 5.00;    Gamma      = 0.69; 
 THETA_M    = 0.50;    alppha     = 0.33; 
-THETA_S    = 0.005;   H_bar      = 1.00; 
-s_T        = 0.40;    theta      = 0.75;  
+THETA_S    = 0.50;    H_bar      = 1.00; 
+tau_H      = 0.30;    theta      = 0.75;  
+tau_M      = 0.20;
 
-omega      = 0.05; // check calibrations
-kappa_m    = 10;
-kappa_d    = 10;
-epsilon_m  = 1.66;
-epsilon_d  = -1;
-
-i_bar      = 1/betta_S - 1; 
-phi_pi     = 1.50;  
-phi_f      = 0.05;
+kappa_m    = 10;      i_bar      = 1/betta_S - 1; 
+kappa_d    = 10;      phi_pi     = 1.50;  
+epsilon_m  = 6;       phi_f      = 0.00;
+epsilon_d  = -0.3;    omega      = 0.025;         
 
 rho_z      = 0.90; 
 rho_xi     = 0.50; 
@@ -322,17 +327,17 @@ model;
   T = 0;
 
   [name='38. H Transfers'] //check ss command
-  //T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1));   
-  T_H = (s_T / (1 - s_T)) * (steady_state(w_H)*steady_state(L_H) + steady_state(i_d)*steady_state(m_H) + steady_state(i)*steady_state(m_cH));
+  //T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1));   
+  T_H = (tau_H / (1 - tau_H)) * (steady_state(w_H)*steady_state(L_H) + steady_state(i_d)*steady_state(m_H) + steady_state(i)*steady_state(m_cH));
 
   [name='39. M Transfers']
-  T_M = 0;
+  T_M = (tau_M / (1 - tau_M)) * (steady_state(w_M)*steady_state(L_M));
 
   [name='40. Taylor Rule'] 
   log( (1+i) / (1+i_bar) ) = rho_i*log( (1+i(-1)) / (1+i_bar) ) + (1-rho_i)*phi_pi*log(1+pi_var) + xi; 
 
   [name='41. Central Bank Lending Rule']
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
 
   [name='42. Central Bank Balance Sheet'] 
   f = lambda_H*m_cH + m_cB;
@@ -371,6 +376,11 @@ model;
   [name='53. Housing Market Clearing']
   H = H_bar;
 
+  [name='Goods Market Clearing'] // checking that Walras Law holds
+  WR = - Y + C + I + i_f*f - i*(m_cB+lambda_H*m_cH) + (kappa_y/2)*((I/(I(-1))-1)^2)*I
+      + (kappa_m/2) * (( i_m/(i_m(-1)) - 1 )^2) * i_m * n 
+      + (kappa_d/2) * (( i_d/(i_d(-1)) - 1 )^2) * i_d * m;
+
   // ---------- Shocks ----------
   [name='54. Technological Process']
   log(Z) = rho_z*log(Z(-1)) + varepsilon_z;
@@ -385,7 +395,7 @@ model;
   [name='H Net Wealth']
   NW_H = m_H + m_cH;
 
-  [name='M Income']
+  [name='M Income']         // check everything in this block. should i measure NET wealth? 
   INC_M = w_M*L_M + T_M;
   [name='M Net Wealth']
   NW_M = s*H_M - n_M;
@@ -450,7 +460,6 @@ initval;
   // Analytically Solvable
   d_k = 0;
   T = 0;
-  T_M = 0;
   i = i_bar;
   H = H_bar;
   r = 1/betta_S - 1 + delta;
@@ -458,13 +467,13 @@ initval;
   w = (1-alppha)*( mc*(r/alppha)^(-alppha) )^(1/(1-alppha));
 
   // Guesses
-  L_H = 0.23;
+  L_H = 0.33;
   L_M = 0.35;
   H_S = H; 
   f = 0.02;
 
   // Rates
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
 
@@ -477,9 +486,10 @@ initval;
   m_H = m_tilde_H^(1-psi*epsilon_c) * varpi * ( PSI / ( (1 - betta_H*(1+i_d))*C_H^(-sigma) ) )^epsilon_c;
   m_cH = m_tilde_H^(1-psi*epsilon_c) * (1-varpi) * ( PSI / ( (1 - betta_H*(1+i))*C_H^(-sigma) ) )^epsilon_c; 
   m = lambda_H*m_H;
-  T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d*m_H + i*m_cH);
+  T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d*m_H + i*m_cH);
   
   // M
+  T_M = (tau_M / (1 - tau_M)) * (w_M*L_M);
   H_M = (H - lambda_S*H_S)/lambda_M; 
   C_M = ( (w_M * (epsilon_w-1)/epsilon_w) / (chi * L_M^varphi) )^(1/sigma);
   n_M = 1/i_m * (w_M*L_M + T_M - C_M);
@@ -498,9 +508,10 @@ initval;
   C_S = 1/lambda_S * (C-lambda_H*C_H-lambda_M*C_M);
   X_1 = (C_S^(-sigma)) * Y * mc / (1 - theta * betta_S) ;
   X_2 = (C_S^(-sigma)) * Y / (1 - theta * betta_S) ;
+  WR = - Y + C + I ;
 
   // S
-  T_S = -lambda_H/lambda_S*T_H;
+  T_S = -lambda_H/lambda_S*T_H; // (check) update for T_M
   b_S = 1/(1-i+i_f)*(C_S + I_S - r*K_S - T_S - 1/lambda_S*(d_i + (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m));
   b = lambda_S*b_S;
   d_b = (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m - (i-i_f)*b;
@@ -552,7 +563,6 @@ endval;
   // Analytically Solvable
   d_k = 0;
   T = 0;
-  T_M = 0;
   i = i_bar;
   H = H_bar;
   r = 1/betta_S - 1 + delta;
@@ -560,13 +570,13 @@ endval;
   w = (1-alppha)*( mc*(r/alppha)^(-alppha) )^(1/(1-alppha));
 
   // Guesses
-  L_H = 0.23;
+  L_H = 0.33;
   L_M = 0.35;
   H_S = H; 
   f = 0.02;
 
   // Rates
-  i_f = i + phi_f*f;
+  i_f = 0.005 + i + phi_f*f;
   i_d = epsilon_d/(epsilon_d-1)*(omega*i+(1-omega)*i_f);
   i_m = epsilon_m/(epsilon_m-1)*i_f; 
 
@@ -579,9 +589,10 @@ endval;
   m_H = m_tilde_H^(1-psi*epsilon_c) * varpi * ( PSI / ( (1 - betta_H*(1+i_d))*C_H^(-sigma) ) )^epsilon_c;
   m_cH = m_tilde_H^(1-psi*epsilon_c) * (1-varpi) * ( PSI / ( (1 - betta_H*(1+i))*C_H^(-sigma) ) )^epsilon_c; 
   m = lambda_H*m_H;
-  T_H = (s_T / (1 - s_T)) * (w_H*L_H + i_d*m_H + i*m_cH);
+  T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d*m_H + i*m_cH);
   
   // M
+  T_M = (tau_M / (1 - tau_M)) * (w_M*L_M);
   H_M = (H - lambda_S*H_S)/lambda_M; 
   C_M = ( (w_M * (epsilon_w-1)/epsilon_w) / (chi * L_M^varphi) )^(1/sigma);
   n_M = 1/i_m * (w_M*L_M + T_M - C_M);
@@ -600,6 +611,7 @@ endval;
   C_S = 1/lambda_S * (C-lambda_H*C_H-lambda_M*C_M);
   X_1 = (C_S^(-sigma)) * Y * mc / (1 - theta * betta_S) ;
   X_2 = (C_S^(-sigma)) * Y / (1 - theta * betta_S) ;
+  WR = - Y + C + I ;
 
   // S
   T_S = -lambda_H/lambda_S*T_H;
@@ -655,10 +667,8 @@ write_latex_definitions;
 % Perfect Foresight Simulation 
 %--------------------------------------------------------------------------------
 
-perfect_foresight_setup(periods=100);
+perfect_foresight_setup(periods=50);
 perfect_foresight_solver(maxit=15);
-
-
 
 
 %--------------------------------------------------------------------------------
@@ -694,7 +704,7 @@ CEV_S = (1 + (V_S_trans - V_S_init).*(1-betta_S).*(1-sigma) ./ (C_S_init^(1-sigm
 
 %% ------------- 2. Plotting Consumption Equivalent Variation -------------
 time_axis = 1:options_.periods;
-graph_dir = 'model/graphs';
+graph_dir = 'model/results';
 if ~exist(graph_dir, 'dir')
     mkdir(graph_dir);
 end
@@ -708,7 +718,7 @@ legend('CEV_H', 'CEV_M', 'CEV_S', 'Location', 'best');
 grid on;
 xlim([1 options_.periods]);
 
-exportgraphics(cev_fig, 'model/graphs/Fig4_CEV_Dynamics.pdf', 'ContentType', 'vector');
+exportgraphics(cev_fig, fullfile(graph_dir, 'Fig4_CEV_Dynamics.pdf'), 'ContentType', 'vector');
 
 %% ------------- 3. Grouped Plots (% deviations, pp deviations, levels) -------------
 
@@ -770,14 +780,14 @@ title('Prices (% Dev)'); legend('s', 'q', 'r', 'Location', 'best'); grid on; xli
 % Subplot 8: Interest Rates (Annualized pp dev)
 subplot(3,3,8);
 plot(time_axis, get_pp('i'), 'k', time_axis, get_pp('i_m'), 'r', time_axis, get_pp('i_d'), 'b', time_axis, get_pp('i_f'), 'y', 'LineWidth', 2);
-title('Interest Rates (Ann. pp dev)'); legend('Policy (i)', 'Mortgage (i^m)', 'Deposit (i^d)', 'i^f', 'Location', 'best'); grid on; xlim([1 options_.periods]);
+title('Interest Rates (Ann. pp dev)'); legend('Policy (i)', 'Mortgage (i^m)', 'Deposit (i^d)', 'i^f', 'Location', 'southeast'); grid on; xlim([1 options_.periods]);
 
 % Subplot 9: Inflation (Annualized pp dev)
 subplot(3,3,9);
 plot(time_axis, get_pp('pi_var'), 'k', time_axis, get_pp('pi_w_H'), 'b', time_axis, get_pp('pi_w_M'), 'r', 'LineWidth', 2);
 title('Inflation (Ann. pp dev)'); legend('pi', 'pi_w_H', 'pi_w_M', 'Location', 'best'); grid on; xlim([1 options_.periods]);
 
-exportgraphics(fig1, 'model/graphs/Fig1_HH_Dynamics.pdf', 'ContentType', 'vector');
+exportgraphics(fig1, fullfile(graph_dir, 'Fig1_HH_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % ------------- FIGURE 2: Financial, Housing & Public Sector -------------
@@ -813,7 +823,12 @@ subplot(3,3,6);
 plot(time_axis, get_lvl('T_H'), 'b', time_axis, get_lvl('T_M'), 'r', time_axis, get_lvl('T_S'), 'g', 'LineWidth', 2);
 title('Transfers (Levels)'); legend('T_H', 'T_M', 'T_S', 'Location', 'best'); grid on; xlim([1 options_.periods]);
 
-exportgraphics(fig2, 'model/graphs/Fig2_FHP_Dynamics.pdf', 'ContentType', 'vector');
+% Subplot 7: Walras Residual (Levels)
+%subplot(3,3,7);
+%plot(time_axis, get_lvl('WR'), 'k', 'LineWidth', 2);
+%title('Walras Residual (Levels)'); grid on; xlim([1 options_.periods]);
+
+exportgraphics(fig2, fullfile(graph_dir, 'Fig2_FHP_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % ------------- FIGURE 3: Welfare, Inequality & Shocks -------------
@@ -832,15 +847,19 @@ title('Welfare (Levels)'); legend('V_H', 'V_M', 'V_S', 'Location', 'best'); grid
 
 % Subplot 3: Inequality (Levels)
 subplot(2,2,3);
-plot(time_axis, get_lvl('GINI_I'), 'b', time_axis, get_lvl('GINI_W'), 'r', 'LineWidth', 2);
-title('Inequality (Levels)'); legend('Income Gini', 'Wealth Gini', 'Location', 'best'); grid on; xlim([1 options_.periods]);
+plot(time_axis, get_lvl('GINI_I'), 'b', 'LineWidth', 2);
+title('Income Inequality (Levels)'); legend('Income Gini','Location', 'best'); grid on; xlim([1 options_.periods]);
+
+subplot(2,2,4);
+plot(time_axis, get_lvl('GINI_W'), 'r', 'LineWidth', 2);
+title('Wealth Inequality (Levels)'); legend('Wealth Gini', 'Location', 'best'); grid on; xlim([1 options_.periods]);
 
 % Subplot 4: Exogenous Deposit Shock (Levels)
-subplot(2,2,4);
-plot(time_axis, get_exo_lvl('varpi'), 'k', 'LineWidth', 2);
-title('Deposit Bundle Shock (varpi)'); legend('varpi', 'Location', 'best'); grid on; xlim([1 options_.periods]);
+%subplot(2,2,4);
+%plot(time_axis, get_exo_lvl('varpi'), 'k', 'LineWidth', 2);
+%title('Deposit Bundle Shock (varpi)'); legend('varpi', 'Location', 'best'); grid on; xlim([1 options_.periods]);
 
-exportgraphics(fig3, 'model/graphs/Fig3_WI_Dynamics.pdf', 'ContentType', 'vector');
+exportgraphics(fig3, fullfile(graph_dir, 'Fig3_WI_Dynamics.pdf'), 'ContentType', 'vector');
 
 
 % ------------- FIGURE 4: Banking -------------
@@ -862,7 +881,30 @@ subplot(2,2,2);
 plot(time_axis, get_dev('m_cB'), 'b', time_axis, get_dev('f'), 'r', 'LineWidth', 2);
 title('Bank Reserves & CB Loans (% Dev)'); legend('m_cB','f', 'Location', 'best'); grid on; xlim([1 options_.periods]);
 
-exportgraphics(fig5, 'model/graphs/Fig5_Bank_Dynamics.pdf', 'ContentType', 'vector');
+exportgraphics(fig5, fullfile(graph_dir, 'Fig5_Bank_Dynamics.pdf'), 'ContentType', 'vector');
+
+
+%% ------------- 4. Steady-State Comparison Table -------------
+
+% Column 1 is the initial steady state 
+% Last column is the final steady state 
+
+init_SS  = oo_.endo_simul(:, 1);
+final_SS = oo_.endo_simul(:, end);
+
+% Retrieve endogenous variable names 
+var_names = cellstr(M_.endo_names);
+
+% Assemble the 2-column data table
+SS_Table = table(var_names, init_SS, final_SS, ...
+    'VariableNames', {'Variable', 'Init_SS', 'Final_SS'});
+
+% --- Export to Excel ---
+excel_filename = fullfile(graph_dir, 'SS_Comparison.xlsx');
+writetable(SS_Table, excel_filename);
+
+
+
 
 
 
