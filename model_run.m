@@ -37,20 +37,24 @@ if run_sensitivity
         'betta_H',   0.95;
         'betta_M',   0.972;
         'betta_S',   0.985;
-        'epsilon_c', 3.00;
+        'epsilon_c', 2.00;
         'Gamma',     0.25;
         'kappa_d',   0.00;
         'kappa_m',   0.00;
         'kappa_w',   0.00;
         'kappa_y',   0.00;
-        'omega',     0.30;
+        'omega',     1.00;
         'phi_f',     0.05;
-        'phi_pi',    2.50;
+        'phi_pi',    0.00;
         'PSI',       0.50;
         'tau_H',     0.00;
         'tau_M',     0.00;
-        'theta',     0.00
+        'theta',     0.00;
+        'chi',       18.00;
+        'alpha_L',   0.60
     };    
+
+    sensitivity_cases = {'epsilon_c', 2.00}
 
     for i = 1:size(sensitivity_cases, 1)
         p_name = sensitivity_cases{i, 1}; % name 

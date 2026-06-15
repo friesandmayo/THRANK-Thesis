@@ -253,9 +253,36 @@ function post_process_results(run_type, out_dir, M_, options_, oo_base, oo_alt, 
     var_names = cellstr(M_.endo_names);
 
     if is_sens
+        num_vars = length(var_names);
+        
+        % Preallocate cell arrays for the TRUE/FALSE strings
+        Check_Init_SS  = cell(num_vars, 1);
+        Check_Final_SS = cell(num_vars, 1);
+        
+        % Adds check to see if paramter change changes steady-states.
+        % Using 1e-6 tolerance to avoid floating-point errors.
+        for i = 1:num_vars
+            % Check Initial SS
+            if abs(oo_base.endo_simul(i, 1) - oo_alt.endo_simul(i, 1)) < 1e-6
+                Check_Init_SS{i} = 'TRUE';
+            else
+                Check_Init_SS{i} = 'FALSE';
+            end
+            
+            % Check Final SS
+            if abs(oo_base.endo_simul(i, end) - oo_alt.endo_simul(i, end)) < 1e-6
+                Check_Final_SS{i} = 'TRUE';
+            else
+                Check_Final_SS{i} = 'FALSE';
+            end
+        end
+        
+        % Append the calculated TRUE/FALSE columns to the table
         SS_Table = table(var_names, oo_base.endo_simul(:, 1), oo_base.endo_simul(:, end), ...
                                     oo_alt.endo_simul(:, 1), oo_alt.endo_simul(:, end), ...
-            'VariableNames', {'Variable', 'Base_Init_SS', 'Base_Final_SS', 'Alt_Init_SS', 'Alt_Final_SS'});
+                                    Check_Init_SS, Check_Final_SS, ...
+            'VariableNames', {'Variable', 'Base_Init_SS', 'Base_Final_SS', 'Alt_Init_SS', 'Alt_Final_SS', 'Check_Init_SS', 'Check_Final_SS'});
+            
         writetable(SS_Table, fullfile(out_dir, sprintf('SS_Comparison_%s.xlsx', param_name)));
     else
         SS_Table = table(var_names, oo_base.endo_simul(:, 1), oo_base.endo_simul(:, end), ...
@@ -267,9 +294,9 @@ function post_process_results(run_type, out_dir, M_, options_, oo_base, oo_alt, 
     %% ------------- 5. Path in Levels -------------
     var_list = {'C_H', 'C_M', 'C_S', 'L_H', 'L_M', 'C', 'INC_H', 'INC_M', 'INC_S', ...
                 'NW_H', 'NW_M', 'NW_S', 'mc', 'Y', 'L', 'K', 'I', 'w', 's', 'q', ...
-                'r', 'i', 'i_m', 'i_d', 'H_M', 'pi_var', 'mu', 'varpi', 'm_H', 'm_cH', ...
-                'n_M', 'b_S', 'd_S', 'd_i', 'd_b', 'd_k', 'WR', 'T_H', 'T_M', 'T_S', 'GINI_I', 'GINI_W', ...
-                'U_H', 'U_M', 'U_S', 'V_H', 'V_M', 'V_S', 'W_TOT'};
+                'r', 'i', 'i_m', 'i_d', 'pi_var', 'mu', 'i_r', 'm_H', 'm_cH', 'H_M' ...
+                'H_S', 'n_M', 'b_S', 'd_S', 'd_i', 'd_b', 'd_k', 'SR_H', 'SR_M', 'SR_S', 'GINI_I', 'GINI_W', ...
+                'm_cB', 'f', 'i_f', 'V_H', 'V_M', 'V_S', 'W_TOT'};
 
     num_vars = length(var_list);
     num_cols = 7;

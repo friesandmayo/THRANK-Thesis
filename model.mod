@@ -3,7 +3,7 @@
 * WARNING: Multiple steps are WIP. Use CTRL+F and search for "check"
 */
 
-
+// Baseline model.
 
 
 %--------------------------------------------------------------------------------
@@ -79,25 +79,29 @@ var
   xi       $\xi$               (long_name='Discretionary Monetary Policy')
 
   // Measurement additions (not present in algebra)
-  U_H                          (long_name='H Period Utility')
-  V_H                          (long_name='H Welfare')
-  INC_H                        (long_name='H Income')      
-  NW_H                         (long_name='H Net Wealth') 
-  U_M                          (long_name='M Period Utility')
-  V_M                          (long_name='M Welfare')
-  INC_M                        (long_name='M Income')
-  NW_M                         (long_name='M Net Wealth')
-  U_S                          (long_name='S Period Utility')
-  V_S                          (long_name='S Welfare')
-  INC_S                        (long_name='S Income')
-  NW_S                         (long_name='S Net Wealth')
-  W_TOT                        (long_name='Total Welfare')
-  INC_TOT                      (long_name='Total Income')
-  NW_TOT                       (long_name='Total Net Wealth')
-  NWR                          (long_name='Net Wealth Ratio')
-  GINI_W                       (long_name='Gini Coefficient for Wealth')
-  GINI_I                       (long_name='Gini Coefficient for Income')
-  WR                           (long_name='Walras Residual')
+  U_H      $U_\mathrm{H}$      (long_name='H Period Utility')
+  V_H      $V_\mathrm{H}$      (long_name='H Welfare')
+  INC_H    $INC_\mathrm{H}$    (long_name='H Income')      
+  NW_H     $NW_\mathrm{H}$     (long_name='H Net Wealth') 
+  U_M      $U_\mathrm{M}$      (long_name='M Period Utility')
+  V_M      $V_\mathrm{M}$      (long_name='M Welfare')
+  INC_M    $INC_\mathrm{M}$    (long_name='M Income')
+  NW_M     $NW_\mathrm{M}$     (long_name='M Net Wealth')
+  U_S      $U_\mathrm{S}$      (long_name='S Period Utility')
+  V_S      $V_\mathrm{S}$      (long_name='S Welfare')
+  INC_S    $INC_\mathrm{S}$    (long_name='S Income')
+  NW_S     $NW_\mathrm{S}$     (long_name='S Net Wealth')
+  W_TOT    $W_\mathrm{TOT}$    (long_name='Total Welfare')
+  INC_TOT  $INC_\mathrm{TOT}$  (long_name='Total Income')
+  NW_TOT   $NW_\mathrm{TOT}$   (long_name='Total Net Wealth')
+  NWR      $NWR$               (long_name='Net Wealth Ratio')
+  GINI_W   $GINI_W$            (long_name='Gini Coefficient for Wealth')
+  GINI_I   $GINI_I$            (long_name='Gini Coefficient for Income')
+  WR       $WR$                (long_name='Walras Residual')
+  i_r      $i^r$               (long_name='Real Policy Rate')
+  SR_H     $SR_\mathrm{H}$     (long_name='H Savings Rate')
+  SR_M     $SR_\mathrm{M}$     (long_name='M Savings Rate')
+  SR_S     $SR_\mathrm{S}$     (long_name='S Savings Rate')
 ;
 
 
@@ -159,6 +163,11 @@ parameters
   rho_i     $\rho_i$                (long_name='Interest Rate Smoothing')
   sigma_z   $\sigma_z$              (long_name='Standard Deviation of Technological Shock')
   sigma_xi  $\sigma_\xi$            (long_name='Standard Deviation of Monetary Policy Shock')
+  
+  // Operational Parameters
+  is_simulation 
+  T_H_param     
+  T_M_param     
 ;
 
 
@@ -246,7 +255,7 @@ parameters
     @#define tau_H_val = 0.30
 @#endif
 @#ifndef tau_M_val
-    @#define tau_M_val = 0.20
+    @#define tau_M_val = 0.20    
 @#endif
 @#ifndef omega_val
     @#define omega_val = 0.025
@@ -300,8 +309,10 @@ phi_f      = @{phi_f_val};       rho_z      = @{rho_z_val};
 rho_xi     = @{rho_xi_val};      rho_i      = @{rho_i_val};
 sigma_z    = 0.01;               sigma_xi   = 0.0025;
 
-
-
+// Operational
+is_simulation = 0;
+T_H_param     = 0;
+T_M_param     = 0;
 
 %--------------------------------------------------------------------------------
 % Model Block
@@ -441,12 +452,11 @@ model;
   [name='37. Government Budget Constraint']
   T = 0;
 
-  [name='38. H Transfers'] //check ss command
-  //T_H = (tau_H / (1 - tau_H)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1));   
-  T_H = (tau_H / (1 - tau_H)) * (steady_state(w_H)*steady_state(L_H) + steady_state(i_d)*steady_state(m_H) + steady_state(i)*steady_state(m_cH));
+  [name='38. H Transfers'] // check logic of SS
+  T_H = (1 - is_simulation) * (tau_H / (1 - tau_H)) * (w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1)) + is_simulation * T_H_param;
 
   [name='39. M Transfers']
-  T_M = (tau_M / (1 - tau_M)) * (steady_state(w_M)*steady_state(L_M));
+  T_M = (1 - is_simulation) * (tau_M / (1 - tau_M)) * (w_M*L_M) + is_simulation * T_M_param;
 
   [name='40. Taylor Rule'] 
   log( (1+i) / (1+i_bar) ) = rho_i*log( (1+i(-1)) / (1+i_bar) ) + (1-rho_i)*phi_pi*log(1+pi_var) + xi; 
@@ -505,20 +515,29 @@ model;
 
   // ---------- Wealth & Income ----------
 
+  [name='Real Policy Rate']
+  1+i_r = (1+i)/(1+pi_var(+1));
+
   [name='H Income']
   INC_H = w_H*L_H + i_d(-1)/(1+pi_var)*m_H(-1) + i(-1)/(1+pi_var)*m_cH(-1) + T_H;
   [name='H Net Wealth']
   NW_H = m_H + m_cH;
+  [name='H Savings Rate']
+  SR_H = (INC_H - C_H) / INC_H;
 
-  [name='M Income']         // check everything in this block. should i measure NET wealth? 
+  [name='M Income']         
   INC_M = w_M*L_M + T_M;
   [name='M Net Wealth']
   NW_M = s*H_M - n_M;
+  [name='M Savings Rate'] // check if housing counts as consumption
+  SR_M = (INC_M - C_M) / INC_M;
 
   [name='S Income']
   INC_S = i(-1)/(1+pi_var)*b_S(-1) + r*K_S(-1) + d_S + T_S;
   [name='S Net Wealth']
   NW_S = q*K_S + s*H_S + b_S;
+  [name='S Savings Rate'] // check if housing counts as consumption
+  SR_S = (INC_S - C_S) / INC_S;
 
   [name='Total Income'] // check if 100 needed
   INC_TOT = 100*(lambda_H*INC_H + lambda_M*INC_M + lambda_S*INC_S);
@@ -627,7 +646,7 @@ initval;
   WR = - Y + C + I ;
 
   // S
-  T_S = -lambda_H/lambda_S*T_H; // (check) update for T_M
+  T_S = -(lambda_H*T_H + lambda_M*T_M) / lambda_S; // (check) update for T_M
   b_S = 1/(1-i+i_f)*(C_S + I_S - r*K_S - T_S - 1/lambda_S*(d_i + (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m));
   b = lambda_S*b_S;
   d_b = (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m - (i-i_f)*b;
@@ -659,7 +678,15 @@ initval;
 end;
 steady(solve_algo=4);
 
-
+verbatim;
+% --- Serves to freeze transfers at *initial* steady-state ---
+T_H_idx = strmatch('T_H', M_.endo_names, 'exact');
+T_M_idx = strmatch('T_M', M_.endo_names, 'exact');
+set_param_value('T_H_param', oo_.steady_state(T_H_idx));
+set_param_value('T_M_param', oo_.steady_state(T_M_idx));
+set_param_value('is_simulation', 1);
+% ------------------------------------------------
+end;
 
 
 %--------------------------------------------------------------------------------
@@ -732,7 +759,7 @@ endval;
   WR = - Y + C + I ;
 
   // S
-  T_S = -lambda_H/lambda_S*T_H;
+  T_S = -(lambda_H*T_H + lambda_M*T_M) / lambda_S;  //check
   b_S = 1/(1-i+i_f)*(C_S + I_S - r*K_S - T_S - 1/lambda_S*(d_i + (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m));
   b = lambda_S*b_S;
   d_b = (i_m-i_f)*n - (i_d-omega*i-(1-omega)*i_f)*m - (i-i_f)*b;
