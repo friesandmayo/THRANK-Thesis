@@ -18,26 +18,26 @@ This script also contains the alternate parameter calibrations which one can edi
 
 ```
 THRANK-Thesis/
-├── model.mod                        # Main "baseline" model file. Creates the main policy experiment and the comparative graphs
-├── model_run.m                      # Runs model.mod. Contains user selectable options, as well as the alternative values of parameters for the sensitivity analysis
-├── post_process_results.m           # Creates the output graphs and excel file 
-├── model/                           # Folder containing Dynare default output    
-├── models_results/                  # Folder containing all results stemming from the baseline model as well as the sensititivy analyses
-  ├── baseline/                      # Folder containing the graphs and steady-state values resulting from the baseline model
-  ├── sensitivity_betta_H/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of betta_H
-  ├── sensitivity_betta_M/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of betta_M
-  ├── sensitivity_betta_S/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of betta_S
-  ├── sensitivity_epsilon_c/         # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of epsilon_c
-  ├── sensitivity_Gamma/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of Gamma
-  ├── sensitivity_kappa_d/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of kappa_d
-  ├── sensitivity_kappa_m/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of kappa_m
-  ├── sensitivity_kappa_w/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of kappa_w
-  ├── sensitivity_kappa_y/           # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of kappa_y
-  ├── sensitivity_omega/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of omega
-  ├── sensitivity_phi_f/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of phi_f
-  ├── sensitivity_phi_pi/            # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of phi_pi
-  ├── sensitivity_PSI/               # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of PSI
-  ├── sensitivity_tau_H/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of tau_H
-  ├── sensitivity_tau_M/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of tau_M
-  ├── sensitivity_theta/             # Folder containing the graphs and steady-state values resulting from the sensitivity analysis of theta
+├── 0_Baseline/
+  ├── model.mod                           # Main "baseline" model file. Creates the main policy experiment and the comparative graphs. Also contains tiered remuneration extension (turned on by recalibrating)
+  ├── model_run.m                         # Runs model.mod. Contains user selectable options, as well as the alternative values of parameters for the reclibration analyses and extension
+  ├── post_process_results.m              # Creates the output graphs and excel files
+  ├── model/                              # Folder containing Dynare default output
+  ├── models_results/                     # Folder containing all results stemming from the baseline model as well as the sensititivy analyses
+    ├── baseline/                         # Folder containing the graphs and steady-state values resulting from the baseline model
+    ├── scenario_betaH_99/                # Folder containing the graphs and steady-state values resulting from the recalibration analysis of betta_H from 0.994 to 0.99
+    ├── scenario_high_substitution/       # Folder containing the graphs and steady-state values resulting from the recalibration analysis of epsilon_c from 6 to 18
+    ├── scenario_low_substitution/        # Folder containing the graphs and steady-state values resulting from the recalibration analysis of epsilon_c from 6 to 3
+    ├── sensitivity_varpi_end/            # Folder containing the graphs and steady-state values resulting from the recalibration analysis of the final varpi from 0.50 to 0.01
+    ├── scenario_omega/                   # Folder containing the graphs and steady-state values resulting from the recalibration analysis of omega from 0.025 to 0.25
+    ├── scenario_log_utility/             # Folder containing the graphs and steady-state values resulting from the recalibration analysis with log utility
+    ├── scenario_ql_05/                   # Folder containing the graphs and steady-state values resulting from the tiered remuneration extension where m_bar = 0.50
+    ├── scenario_ql_07/                   # Folder containing the graphs and steady-state values resulting from the tiered remuneration extension where m_bar = 0.70
+├── 1_Stochastic/
+  ├── model_irf.mod                       # Uses the same model in model.mod but changes the perfect foresight computation to stochastic shock simulation
+  ├── model_irf_run.m                     # Runs model_irf.mod.
+├── 2_Optimal/
+  ├── model.mod                           # Same Dynare mod file as baseline model
+  ├── welfare_maxxing.m                   # Runs model.mod in a loop to plot welfare outcomes for different varpi values, in order to find the welfare maximising one
+  ├── models_results/                     # Contains resulting figure
 ```
