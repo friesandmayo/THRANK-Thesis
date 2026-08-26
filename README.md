@@ -38,6 +38,9 @@ THRANK-Thesis/
 ├── 1_Stochastic/
   ├── model_irf.mod                       # Uses the same model in model.mod but changes the perfect foresight computation to stochastic shock simulation
   ├── model_irf_run.m                     # Runs model_irf.mod.
+  ├── Table_StandardDeviations.tex        # Table of standard deviations taken from results
+  ├── IRFs_varepsilon_xi/                 # Folder containing all the IRFs from the monetary policy shock
+  ├── IRFs_varepsilon_z/                  # Folder containing all the IRFs from the technology shock
 ├── 2_Optimal/
   ├── model.mod                           # Same Dynare mod file as baseline model
   ├── welfare_maxxing.m                   # Runs model.mod in a loop to plot welfare outcomes for different varpi values, in order to find the welfare maximising one
