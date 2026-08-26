@@ -1,0 +1,70 @@
+function T = static_resid_tt(T, y, x, params)
+% function T = static_resid_tt(T, y, x, params)
+%
+% File created by Dynare Preprocessor from .mod file
+%
+% Inputs:
+%   T         [#temp variables by 1]  double   vector of temporary terms to be filled by function
+%   y         [M_.endo_nbr by 1]      double   vector of endogenous variables in declaration order
+%   x         [M_.exo_nbr by 1]       double   vector of exogenous variables in declaration order
+%   params    [M_.param_nbr by 1]     double   vector of parameter values in declaration order
+%
+% Output:
+%   T         [#temp variables by 1]  double   vector of temporary terms
+%
+
+assert(length(T) >= 51);
+
+T(1) = 1+y(57);
+T(2) = (1+y(45))/T(1);
+T(3) = 1/params(11);
+T(4) = params(40)^T(3);
+T(5) = (params(11)-1)/params(11);
+T(6) = (1-params(40))^T(3);
+T(7) = T(4)*y(3)^T(5)+T(6)*y(4)^T(5);
+T(8) = params(11)/(params(11)-1);
+T(9) = y(1)^(-params(7));
+T(10) = params(14)*y(5)^(-params(8));
+T(11) = (y(5)*params(40)/y(3))^T(3);
+T(12) = (y(5)*(1-params(40))/y(4))^T(3);
+T(13) = y(6)^(-params(7));
+T(14) = y(54)*T(13);
+T(15) = T(4)*y(10)^T(5)+T(6)*y(11)^T(5);
+T(16) = params(14)*y(12)^(-params(8));
+T(17) = (params(40)*y(12)/y(10))^T(3);
+T(18) = ((1-params(40))*y(12)/y(11))^T(3);
+T(19) = y(13)^(-params(7));
+T(20) = y(54)*T(19);
+T(21) = T(4)*y(19)^T(5)+T(6)*y(20)^T(5);
+T(22) = params(14)*y(21)^(-params(8));
+T(23) = (params(40)*y(21)/y(19))^T(3);
+T(24) = ((1-params(40))*y(21)/y(20))^T(3);
+T(25) = params(23)/2;
+T(26) = y(58)^2;
+T(27) = y(59)^2;
+T(28) = params(12)*y(2)^(1+params(10));
+T(29) = (1+y(58))^2;
+T(30) = y(58)*params(4)*params(23)*T(29);
+T(31) = params(13)*y(7)^(1+params(10));
+T(32) = (1+y(59))^2;
+T(33) = y(59)*params(5)*params(23)*T(32);
+T(34) = y(30)^params(18);
+T(35) = y(61)*T(34);
+T(36) = y(32)^(1-params(18));
+T(37) = (y(2)*params(1))^params(25);
+T(38) = (y(7)*params(2))^(1-params(25));
+T(39) = 1/y(61);
+T(40) = (y(51)/(1-params(18)))^(1-params(18));
+T(41) = T(39)*T(40);
+T(42) = (y(56)/params(18))^params(18);
+T(43) = T(1)^params(22);
+T(44) = T(1)^(params(22)-1);
+T(45) = 1/T(1);
+T(46) = y(45)/T(1);
+T(47) = params(1)*params(2)*(y(69)-y(65))+params(1)*params(3)*(y(73)-y(65))+params(2)*params(3)*(y(73)-y(69));
+T(48) = params(1)*params(2)*(y(70)-y(66))+params(1)*params(3)*(y(74)-y(66))+params(2)*params(3)*(y(74)-y(70));
+T(49) = sqrt((y(4)-params(41))^2);
+T(50) = sqrt((y(11)-params(41))^2);
+T(51) = sqrt((y(20)-params(41))^2);
+
+end
