@@ -1,5 +1,5 @@
 Starting Dynare (version 6.5).
-Calling Dynare with arguments: noclearall
+Calling Dynare with arguments: noclearall -Dtau_val=0.05 -Dm_bar_val=0.5
 Starting preprocessing of the model file ... 
 Found 91 equation(s). 
 Evaluating expressions... 
@@ -18,7 +18,7 @@ Finding the optimal block decomposition of the dynamic model...
   the largest simultaneous block has 63 equation(s) 
                                  and 52 feedback variable(s). 
 Preprocessing completed. 
-Preprocessing time: 0h00m05s.
+Preprocessing time: 0h00m03s.
 
 STEADY-STATE RESULTS:
 
@@ -116,50 +116,50 @@ excess_m_S 		 0
 
 STEADY-STATE RESULTS:
 
-C_H        		 0.166822
-L_H        		 0.330722
-m_H        		 0.0104237
-m_cH       		 0.679089
-m_tilde_H  		 0.613092
-C_M        		 0.360349
-L_M        		 0.33244
-H_M        		 1.36586
-n_M        		 3.1364
-m_M        		 0.0977058
-m_cM       		 0.62753
-m_tilde_M  		 0.688258
-C_S        		 0.971823
-H_S        		 4.53658
-b_S        		 2.18034
-K_S        		 37.2417
-I_S        		 0.931042
-d_S        		 0.718991
-m_S        		 0.0607233
-m_cS       		 3.95603
-m_tilde_S  		 3.57156
-C          		 0.324733
+C_H        		 0.166209
+L_H        		 0.331973
+m_H        		 0.0411639
+m_cH       		 0.514562
+m_tilde_H  		 0.514237
+C_M        		 0.360317
+L_M        		 0.332797
+H_M        		 1.35563
+n_M        		 3.1478
+m_M        		 0.153344
+m_cM       		 0.514544
+m_tilde_M  		 0.650489
+C_S        		 0.987902
+H_S        		 4.5775
+b_S        		 4.70831
+K_S        		 37.317
+I_S        		 0.932925
+d_S        		 0.731336
+m_S        		 1.86618
+m_cS       		 0.56652
+m_tilde_S  		 2.37096
+C          		 0.326022
 H          		 1
-d          		 0.0718991
-m          		 0.0503665
-m_c        		 0.987419
-n          		 1.25456
-b          		 0.218034
-Y          		 0.420306
-K          		 3.72417
-I          		 0.0931042
-L          		 0.143517
+d          		 0.0731336
+m          		 0.268537
+m_c        		 0.526464
+n          		 1.25912
+b          		 0.470831
+Y          		 0.421156
+K          		 3.7317
+I          		 0.0932925
+L          		 0.143807
 mc         		 0.833333
-d_i        		 0.070051
+d_i        		 0.0701926
 d_k        		 0
-d_b        		 0.00184815
+d_b        		 0.002941
 DELTA      		 1
-X_1        		 1.43653
-X_2        		 1.72384
+X_1        		 1.40444
+X_2        		 1.68533
 T_H        		 0
 T_M        		 0
-f          		 0.987419
-m_cB       		 0.00125916
-G          		 0.00246855
+f          		 0.526464
+m_cB       		 0.00671343
+G          		 0.00184158
 i_d        		 0.00142498
 i_b        		 0.00603622
 i_n        		 0.00748491
@@ -167,60 +167,922 @@ i          		 0.00373742
 i_f        		 0.00623742
 p_tilde    		 1
 w          		 1.63514
-w_H        		 0.496699
-w_M        		 1.14709
-s          		 3.30496
+w_H        		 0.495829
+w_M        		 1.14818
+s          		 3.34201
 q          		 1
 r          		 0.0310362
 pi_var     		 0
 pi_w_H     		 0
 pi_w_M     		 0
-mu         		 0.011973
+mu         		 0.0119746
 Z          		 1
 xi         		 0
-U_H        		 -5.90799
-V_H        		 -984.665
-INC_H      		 0.166822
-NW_H       		 0.689513
-U_M        		 -4.42345
-V_M        		 -442.345
-INC_M      		 0.360349
-NW_M       		 2.10294
-U_S        		 -2.23604
-V_S        		 -372.673
-INC_S      		 1.90287
-NW_S       		 58.432
-W_TOT      		 -706.538
-INC_TOT    		 0.417837
-NW_TOT     		 7.02913
-NWR        		 0.831283
-GINI_W     		 0.7715
-GINI_I     		 0.448041
+U_H        		 -5.92864
+V_H        		 -988.107
+INC_H      		 0.166209
+NW_H       		 0.555726
+U_M        		 -4.42767
+V_M        		 -442.767
+INC_M      		 0.360317
+NW_M       		 2.0506
+U_S        		 -2.22304
+V_S        		 -370.507
+INC_S      		 1.92083
+NW_S       		 59.756
+W_TOT      		 -708.211
+INC_TOT    		 0.419314
+NW_TOT     		 7.07371
+NWR        		 0.844763
+GINI_W     		 0.787028
+GINI_I     		 0.450672
 WR         		 0
 i_r        		 0.00373742
 SR_H       		 0
 SR_M       		 0
-SR_S       		 0.489284
-i_cH       		 0.00373742
-i_cM       		 0.00373742
-i_cS       		 0.00373742
-excess_m_H 		 0
-excess_m_M 		 0
-excess_m_S 		 0
+SR_S       		 0.485689
+i_cH       		 0.00300932
+i_cM       		 0.00301022
+i_cS       		 0.000411417
+excess_m_H 		 0.014562
+excess_m_M 		 0.0145442
+excess_m_S 		 0.0665202
 
 --------------------------------------------------------
 MODEL SIMULATION:
 
-Iter: 1,	 err. = 2.38566,	 time = 0.653
-Iter: 2,	 err. = 0.0222427,	 time = 0.081
-Iter: 3,	 err. = 0.00347739,	 time = 0.067
-Iter: 4,	 err. = 0.000256419,	 time = 0.067
-Iter: 5,	 err. = 9.08967e-07,	 time = 0.066
+Iter: 1,	 err. = 1.30363,	 time = 0.318
+Iter: 2,	 err. = 0.0424909,	 time = 0.239
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 3,	 err. = 0.0424909,	 time = 0.071
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 4,	 err. = 0.0424909,	 time = 0.063
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 5,	 err. = 0.0424909,	 time = 0.063
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 6,	 err. = 0.0424909,	 time = 0.06
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 7,	 err. = 0.0424909,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 8,	 err. = 0.0424909,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 9,	 err. = 0.0424909,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 10,	 err. = 0.0424909,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 11,	 err. = 0.0424909,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 12,	 err. = 0.0424909,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 13,	 err. = 0.0424909,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 14,	 err. = 0.0424909,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 15,	 err. = 0.0424909,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
 
-Total time of simulation: 2.741.
+Total time of simulation: 4.435.
+Maximum number of iterations is reached (modify option maxit).
+--------------------------------------------------------------
+
+
+Entering the homotopy method iterations...
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 1.5724,	 time = 0.056
+Iter: 2,	 err. = 0.0735196,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 3,	 err. = 0.0735196,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 4,	 err. = 0.0735196,	 time = 0.058
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 5,	 err. = 0.0735196,	 time = 0.057
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 6,	 err. = 0.0735196,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 7,	 err. = 0.0735196,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 8,	 err. = 0.0735196,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 9,	 err. = 0.0735196,	 time = 0.062
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 10,	 err. = 0.0735196,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 11,	 err. = 0.0735196,	 time = 0.061
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 12,	 err. = 0.0735196,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 13,	 err. = 0.0735196,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 14,	 err. = 0.0735196,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 15,	 err. = 0.0735196,	 time = 0.052
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+
+Total time of simulation: 3.584.
+Maximum number of iterations is reached (modify option maxit).
+--------------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 1.54683,	 time = 0.054
+Iter: 2,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 3,	 err. = 0.0890101,	 time = 0.059
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 4,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 5,	 err. = 0.0890101,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 6,	 err. = 0.0890101,	 time = 0.052
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 7,	 err. = 0.0890101,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 8,	 err. = 0.0890101,	 time = 0.045
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 9,	 err. = 0.0890101,	 time = 0.057
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 10,	 err. = 0.0890101,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 11,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 12,	 err. = 0.0890101,	 time = 0.052
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 13,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 14,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 15,	 err. = 0.0890101,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+
+Total time of simulation: 3.562.
+Maximum number of iterations is reached (modify option maxit).
+--------------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 1.53628,	 time = 0.05
+Iter: 2,	 err. = 0.154858,	 time = 0.051
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 3,	 err. = 0.154858,	 time = 0.058
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 4,	 err. = 0.154858,	 time = 0.059
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 5,	 err. = 0.154858,	 time = 0.057
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 6,	 err. = 0.154858,	 time = 0.057
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 7,	 err. = 0.154858,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 8,	 err. = 0.154858,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 9,	 err. = 0.154858,	 time = 0.056
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 10,	 err. = 0.154858,	 time = 0.055
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 11,	 err. = 0.154858,	 time = 0.054
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 12,	 err. = 0.154858,	 time = 0.061
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 13,	 err. = 0.154858,	 time = 0.053
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 14,	 err. = 0.154858,	 time = 0.035
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+Iter: 15,	 err. = 0.154858,	 time = 0.058
+[Warning: Matrix is singular to working precision.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1>lin_solve', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 189)" style="font-weight:bold">sim1>lin_solve</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',189,0)">line 189</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('sim1', 'C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m', 131)" style="font-weight:bold">sim1</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\sim1.m',131,0)">line 131</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver_core', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m', 103)" style="font-weight:bold">perfect_foresight_solver_core</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver_core.m',103,0)">line 103</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver>homotopy_loop', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 357)" style="font-weight:bold">perfect_foresight_solver>homotopy_loop</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',357,0)">line 357</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('perfect_foresight_solver', 'C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m', 153)" style="font-weight:bold">perfect_foresight_solver</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\perfect-foresight-models\perfect_foresight_solver.m',153,0)">line 153</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model.driver', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m', 2232)" style="font-weight:bold">model.driver</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\+model\driver.m',2232,0)">line 2232</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', 'C:\dynare\6.5\matlab\dynare.m', 306)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('C:\dynare\6.5\matlab\dynare.m',306,0)">line 306</a>)
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('model_run', 'X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m', 189)" style="font-weight:bold">model_run</a> (<a href="matlab: opentoline('X:\Onedrive\Desktop\THRANK-Thesis\THRANK-Thesis\0_Baseline\model_run.m',189,0)">line 189</a>)
+] 
+
+Total time of simulation: 3.78.
+Maximum number of iterations is reached (modify option maxit).
+--------------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 1.25599,	 time = 0.054
+Iter: 2,	 err. = 0.0125081,	 time = 0.05
+Iter: 3,	 err. = 0.000132062,	 time = 0.054
+Iter: 4,	 err. = 3.23453e-07,	 time = 0.059
+
+Total time of simulation: 0.552.
 --------------------------------------------------------
 
 
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+Call solver on the full nonlinear problem.
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.866433,	 time = 0.056
+Iter: 2,	 err. = 0.0400925,	 time = 0.05
+Iter: 3,	 err. = 0.000494267,	 time = 0.055
+Iter: 4,	 err. = 1.2851e-06,	 time = 0.049
+
+Total time of simulation: 0.506.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.291347,	 time = 0.05
+Iter: 2,	 err. = 0.0428237,	 time = 0.064
+Iter: 3,	 err. = 0.00109643,	 time = 0.054
+Iter: 4,	 err. = 4.07406e-05,	 time = 0.049
+Iter: 5,	 err. = 3.45688e-08,	 time = 0.055
+
+Total time of simulation: 0.722.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.455132,	 time = 0.051
+Iter: 2,	 err. = 0.0475244,	 time = 0.055
+Iter: 3,	 err. = 0.00141167,	 time = 0.052
+Iter: 4,	 err. = 3.92793e-05,	 time = 0.054
+Iter: 5,	 err. = 4.59594e-08,	 time = 0.059
+
+Total time of simulation: 0.691.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+8 	 | 0.31250 	 | succeeded 	 | 4.595941e-08 	 | 0.7
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.340044,	 time = 0.054
+Iter: 2,	 err. = 0.0267948,	 time = 0.051
+Iter: 3,	 err. = 0.000675662,	 time = 0.05
+Iter: 4,	 err. = 9.83546e-06,	 time = 0.053
+
+Total time of simulation: 0.518.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+8 	 | 0.31250 	 | succeeded 	 | 4.595941e-08 	 | 0.7
+9 	 | 0.43750 	 | succeeded 	 | 9.835461e-06 	 | 0.5
+Call solver on the full nonlinear problem.
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.246222,	 time = 0.052
+Iter: 2,	 err. = 0.0183363,	 time = 0.052
+Iter: 3,	 err. = 0.000480986,	 time = 0.051
+Iter: 4,	 err. = 5.0403e-06,	 time = 0.053
+
+Total time of simulation: 0.502.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+8 	 | 0.31250 	 | succeeded 	 | 4.595941e-08 	 | 0.7
+9 	 | 0.43750 	 | succeeded 	 | 9.835461e-06 	 | 0.5
+10 	 | 0.56250 	 | succeeded 	 | 5.040304e-06 	 | 0.5
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.103103,	 time = 0.051
+Iter: 2,	 err. = 0.0883913,	 time = 0.05
+Iter: 3,	 err. = 0.00289112,	 time = 0.051
+Iter: 4,	 err. = 5.69554e-05,	 time = 0.063
+Iter: 5,	 err. = 1.31289e-07,	 time = 0.05
+
+Total time of simulation: 0.67.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+8 	 | 0.31250 	 | succeeded 	 | 4.595941e-08 	 | 0.7
+9 	 | 0.43750 	 | succeeded 	 | 9.835461e-06 	 | 0.5
+10 	 | 0.56250 	 | succeeded 	 | 5.040304e-06 	 | 0.5
+11 	 | 0.81250 	 | succeeded 	 | 1.312887e-07 	 | 0.7
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.0813756,	 time = 0.053
+Iter: 2,	 err. = 0.0583376,	 time = 0.053
+Iter: 3,	 err. = 0.00126648,	 time = 0.053
+Iter: 4,	 err. = 2.22868e-05,	 time = 0.051
+Iter: 5,	 err. = 1.13515e-08,	 time = 0.053
+
+Total time of simulation: 0.642.
+--------------------------------------------------------
+
+
+Iter. 	 | Share 	 | Status 	 | Max. residual	 | Duration (sec)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1 	 | 1.00000 	 | failed 	 | 4.249086e-02 	 | 4.4
+2 	 | 0.50000 	 | failed 	 | 7.351960e-02 	 | 3.6
+3 	 | 0.25000 	 | failed 	 | 8.901012e-02 	 | 3.6
+4 	 | 0.12500 	 | failed 	 | 1.548577e-01 	 | 3.8
+5 	 | 0.06250 	 | succeeded 	 | 3.234528e-07 	 | 0.6
+6 	 | 0.12500 	 | succeeded 	 | 1.285095e-06 	 | 0.5
+7 	 | 0.18750 	 | succeeded 	 | 3.456882e-08 	 | 0.7
+8 	 | 0.31250 	 | succeeded 	 | 4.595941e-08 	 | 0.7
+9 	 | 0.43750 	 | succeeded 	 | 9.835461e-06 	 | 0.5
+10 	 | 0.56250 	 | succeeded 	 | 5.040304e-06 	 | 0.5
+11 	 | 0.81250 	 | succeeded 	 | 1.312887e-07 	 | 0.7
+12 	 | 1.00000 	 | succeeded 	 | 1.135151e-08 	 | 0.7
+
 Perfect foresight solution found.
 
-Total computing time : 0h00m24s
+Total computing time : 0h00m21s
+Note: warning(s) encountered in MATLAB/Octave code

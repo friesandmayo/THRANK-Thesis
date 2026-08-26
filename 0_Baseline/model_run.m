@@ -5,7 +5,7 @@ clear all; close all; clc;
 % USER OPTIONS
 % =========================================================================
 run_sensitivity    = false;   % Set to true to run sensitivity
-run_joint_scenario = false;   % Joint parameter analysis
+run_joint_scenario = true;   % Joint parameter analysis
 show_graphs        = false;   % Set to true to display windows, false to run silently
 % =========================================================================
 
