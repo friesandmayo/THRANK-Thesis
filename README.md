@@ -1,5 +1,10 @@
 # THRANK-Thesis
 
+This repository contains all the code and models I created for my Master's Thesis: "Central Bank Reserves for All: Welfare & Inequality in a THRANK Model"
+Author: Marcos Constantinou, University of Lausanne
+Supervised by: Aurélien Eyquem, University of Lausanne
+
+
 ## TLDR
 There is only one mod file to run the baseline perfect foresight model and the sensitivity analyses, including the tiered remuneration extension. There is another mod file for the stochastic simulations model. As for the optimal varpi analysis, the mod file is the same as the baseline but the matlab code is different.
 
