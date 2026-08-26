@@ -1,6 +1,6 @@
 # THRANK-Thesis
 
-This repository contains all the code and models I created for my Master's Thesis.
+This repository contains my Master's Thesis and all the code/models to run the results.
 
 - Title: "Central Bank Reserves for All: Welfare & Inequality in a THRANK Model"
 
