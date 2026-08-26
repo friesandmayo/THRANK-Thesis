@@ -1,0 +1,226 @@
+Starting Dynare (version 6.5).
+Calling Dynare with arguments: noclearall
+Starting preprocessing of the model file ... 
+Found 91 equation(s). 
+Evaluating expressions... 
+Computing static model derivatives (order 1). 
+Normalizing the static model... 
+Finding the optimal block decomposition of the static model... 
+12 block(s) found: 
+  11 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 62 equation(s) 
+                                 and 62 feedback variable(s). 
+Computing dynamic model derivatives (order 1). 
+Normalizing the dynamic model... 
+Finding the optimal block decomposition of the dynamic model... 
+11 block(s) found: 
+  10 recursive block(s) and 1 simultaneous block(s). 
+  the largest simultaneous block has 63 equation(s) 
+                                 and 52 feedback variable(s). 
+Preprocessing completed. 
+Preprocessing time: 0h00m05s.
+
+STEADY-STATE RESULTS:
+
+C_H        		 0.165589
+L_H        		 0.3333
+m_H        		 0.417949
+m_cH       		 2.72288e-05
+m_tilde_H  		 0.417966
+C_M        		 0.360164
+L_M        		 0.3333
+H_M        		 1.33709
+n_M        		 3.16752
+m_M        		 0.598095
+m_cM       		 3.84136e-06
+m_tilde_M  		 0.598098
+C_S        		 1.01739
+H_S        		 4.65165
+b_S        		 5.61971
+K_S        		 37.4058
+I_S        		 0.935145
+d_S        		 0.75402
+m_S        		 2.56791
+m_cS       		 0.000167296
+m_tilde_S  		 2.56801
+C          		 0.328599
+H          		 1
+d          		 0.075402
+m          		 0.705004
+m_c        		 0.017657
+n          		 1.26701
+b          		 0.561971
+Y          		 0.422158
+K          		 3.74058
+I          		 0.0935145
+L          		 0.14415
+mc         		 0.833333
+d_i        		 0.0703596
+d_k        		 0
+d_b        		 0.00504237
+DELTA      		 1
+X_1        		 1.34702
+X_2        		 1.61642
+T_H        		 0
+T_M        		 0
+f          		 0.017657
+m_cB       		 0.0176251
+G          		 4.41425e-05
+i_d        		 0.00142498
+i_b        		 0.00603622
+i_n        		 0.00748491
+i          		 0.00373742
+i_f        		 0.00623742
+p_tilde    		 1
+w          		 1.63514
+w_H        		 0.49503
+w_M        		 1.14918
+s          		 3.40957
+q          		 1
+r          		 0.0310362
+pi_var     		 0
+pi_w_H     		 0
+pi_w_M     		 0
+mu         		 0.0119823
+Z          		 1
+xi         		 0
+U_H        		 -5.9512
+V_H        		 -991.867
+INC_H      		 0.165589
+NW_H       		 0.417977
+U_M        		 -4.43484
+V_M        		 -443.484
+INC_M      		 0.360164
+NW_M       		 1.98948
+U_S        		 -2.19124
+V_S        		 -365.206
+INC_S      		 1.95254
+NW_S       		 61.4537
+W_TOT      		 -709.848
+INC_TOT    		 0.422114
+NW_TOT     		 7.15015
+NWR        		 0.859474
+GINI_W     		 0.803432
+GINI_I     		 0.454752
+WR         		 0
+i_r        		 0.00373742
+SR_H       		 0
+SR_M       		 0
+SR_S       		 0.478939
+i_cH       		 0.00373742
+i_cM       		 0.00373742
+i_cS       		 0.00373742
+excess_m_H 		 0
+excess_m_M 		 0
+excess_m_S 		 0
+
+STEADY-STATE RESULTS:
+
+C_H        		 0.166822
+L_H        		 0.330722
+m_H        		 0.0104237
+m_cH       		 0.679089
+m_tilde_H  		 0.613092
+C_M        		 0.360349
+L_M        		 0.33244
+H_M        		 1.36586
+n_M        		 3.1364
+m_M        		 0.0977058
+m_cM       		 0.62753
+m_tilde_M  		 0.688258
+C_S        		 0.971823
+H_S        		 4.53658
+b_S        		 2.18034
+K_S        		 37.2417
+I_S        		 0.931042
+d_S        		 0.718991
+m_S        		 0.0607233
+m_cS       		 3.95603
+m_tilde_S  		 3.57156
+C          		 0.324733
+H          		 1
+d          		 0.0718991
+m          		 0.0503665
+m_c        		 0.987419
+n          		 1.25456
+b          		 0.218034
+Y          		 0.420306
+K          		 3.72417
+I          		 0.0931042
+L          		 0.143517
+mc         		 0.833333
+d_i        		 0.070051
+d_k        		 0
+d_b        		 0.00184815
+DELTA      		 1
+X_1        		 1.43653
+X_2        		 1.72384
+T_H        		 0
+T_M        		 0
+f          		 0.987419
+m_cB       		 0.00125916
+G          		 0.00246855
+i_d        		 0.00142498
+i_b        		 0.00603622
+i_n        		 0.00748491
+i          		 0.00373742
+i_f        		 0.00623742
+p_tilde    		 1
+w          		 1.63514
+w_H        		 0.496699
+w_M        		 1.14709
+s          		 3.30496
+q          		 1
+r          		 0.0310362
+pi_var     		 0
+pi_w_H     		 0
+pi_w_M     		 0
+mu         		 0.011973
+Z          		 1
+xi         		 0
+U_H        		 -5.90799
+V_H        		 -984.665
+INC_H      		 0.166822
+NW_H       		 0.689513
+U_M        		 -4.42345
+V_M        		 -442.345
+INC_M      		 0.360349
+NW_M       		 2.10294
+U_S        		 -2.23604
+V_S        		 -372.673
+INC_S      		 1.90287
+NW_S       		 58.432
+W_TOT      		 -706.538
+INC_TOT    		 0.417837
+NW_TOT     		 7.02913
+NWR        		 0.831283
+GINI_W     		 0.7715
+GINI_I     		 0.448041
+WR         		 0
+i_r        		 0.00373742
+SR_H       		 0
+SR_M       		 0
+SR_S       		 0.489284
+i_cH       		 0.00373742
+i_cM       		 0.00373742
+i_cS       		 0.00373742
+excess_m_H 		 0
+excess_m_M 		 0
+excess_m_S 		 0
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 2.38566,	 time = 0.653
+Iter: 2,	 err. = 0.0222427,	 time = 0.081
+Iter: 3,	 err. = 0.00347739,	 time = 0.067
+Iter: 4,	 err. = 0.000256419,	 time = 0.067
+Iter: 5,	 err. = 9.08967e-07,	 time = 0.066
+
+Total time of simulation: 2.741.
+--------------------------------------------------------
+
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m24s
