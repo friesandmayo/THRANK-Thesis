@@ -1,9 +1,12 @@
 # THRANK-Thesis
 
 This repository contains all the code and models I created for my Master's Thesis.
-*Title: "Central Bank Reserves for All: Welfare & Inequality in a THRANK Model"
-*Author: Marcos Constantinou, University of Lausanne
-*Supervised by: Aurélien Eyquem, University of Lausanne
+
+- Title: "Central Bank Reserves for All: Welfare & Inequality in a THRANK Model"
+
+- Author: Marcos Constantinou, University of Lausanne
+
+- Supervised by: Aurélien Eyquem, University of Lausanne
 
 
 ## TLDR
