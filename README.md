@@ -1,18 +1,20 @@
 # THRANK-Thesis
 
 ## TLDR
-There is only one mod file to run the baseline model as well as the sensitivity analyses. 
-This file contains the baseline parameter calibration values.
+There is only one mod file to run the baseline perfect foresight model and the sensitivity analyses, including the tiered remuneration extension. There is another mod file for the stochastic simulations model. As for the optimal varpi analysis, the mod file is the same as the baseline but the matlab code is different.
 
-In order to run the models, use the "matlab_run.m" Matlab script. 
-This script has two selectable options.
+In order to run the models, use the "model_run.m", "model_irf_run.m", and "welfare_maxxing.m" Matlab scripts. 
+The model run scripts have two selectable options.
 * run_sensitivity:
   + true: Runs a loop over the baseline model file which changes one parameter at a time
+  + false: Only runs the baseline model
+* run_joint_scenario:
+  + true: Runs a loop over the baseline model file which changes multiple parameters at a time
   + false: Only runs the baseline model
 * show_graphs:
   + true: Matlab will display each graph as is printed. This is mainly useful for running quick tests
   + false: Does not display the graphs as they run, but still saves them as pdfs.
-This script also contains the alternate parameter calibrations which one can edit to run sensitivity analysis for whichever value of a parameter one needs.
+This script also contains the alternate parameter calibrations which one can edit to run sensitivity analysis for whichever parameter values.
 
 ## Structure
 
