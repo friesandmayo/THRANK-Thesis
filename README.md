@@ -1,5 +1,14 @@
 # THRANK-Thesis
 
+This repository contains my Master's Thesis and all the code/models to run the results.
+
+- Title: "Central Bank Reserves for All: Welfare & Inequality in a THRANK Model"
+
+- Author: Marcos Constantinou, University of Lausanne
+
+- Supervised by: Aurélien Eyquem, University of Lausanne
+
+
 ## TLDR
 There is only one mod file to run the baseline perfect foresight model and the sensitivity analyses, including the tiered remuneration extension. There is another mod file for the stochastic simulations model. As for the optimal varpi analysis, the mod file is the same as the baseline but the matlab code is different.
 
@@ -38,6 +47,9 @@ THRANK-Thesis/
 ├── 1_Stochastic/
   ├── model_irf.mod                       # Uses the same model in model.mod but changes the perfect foresight computation to stochastic shock simulation
   ├── model_irf_run.m                     # Runs model_irf.mod.
+  ├── Table_StandardDeviations.tex        # Table of standard deviations taken from results
+  ├── IRFs_varepsilon_xi/                 # Folder containing all the IRFs from the monetary policy shock
+  ├── IRFs_varepsilon_z/                  # Folder containing all the IRFs from the technology shock
 ├── 2_Optimal/
   ├── model.mod                           # Same Dynare mod file as baseline model
   ├── welfare_maxxing.m                   # Runs model.mod in a loop to plot welfare outcomes for different varpi values, in order to find the welfare maximising one
