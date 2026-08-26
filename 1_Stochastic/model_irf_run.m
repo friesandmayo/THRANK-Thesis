@@ -193,10 +193,8 @@ for s = 1:length(shocks)
         %title(sprintf('%s (%s)', p_def.Name, p_def.YLabel)); 
         xlim([1, horizon]);
         
-        % Tex interpreter required to render LaTeX symbols (\pi, \mu)
         legend(leg_str, 'Interpreter', 'tex', 'Location', 'best', 'FontSize', 9);
         
-        % Export logic using explicit filename mapping from old code
         file_path = fullfile(shock_folder, sprintf('%s_%s.pdf', p_def.Filename, shock_name));
         exportgraphics(fig, file_path, 'ContentType', 'vector');
         close(fig);
@@ -219,7 +217,7 @@ fprintf('------------------------------------------------------\n');
 fprintf('%-30s %-10s %-10s\n', 'Variable', 'no-RFA', 'RFA');
 fprintf('------------------------------------------------------\n');
 
-% Define headers for the three sections [flag, LaTeX header, Console header]
+% Define headers for the three sections 
 sections = {
     0, 'Standard Deviation (\\%%)', 'Standard Deviation (%)';
     1, 'Standard Deviation (Annualized pp)', 'Standard Deviation (Annualized pp)';
@@ -231,7 +229,6 @@ for s = 1:size(sections, 1)
     tex_header = sections{s, 2};
     console_header = sections{s, 3};
     
-    % Find all variables belonging to the current metric type
     idx_group = find(is_rate == rate_flag);
     if isempty(idx_group)
         continue;

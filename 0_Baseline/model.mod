@@ -903,3 +903,8 @@ write_latex_definitions;
 
 perfect_foresight_setup(periods=600);
 perfect_foresight_solver(maxit=15);
+
+
+
+
+// Author: Marcos Constantinou

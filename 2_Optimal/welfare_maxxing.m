@@ -119,7 +119,6 @@ if run_optimization
     % Reference lines for optimals
     %xline(optimal_varpi, '--k', 'Opt \varpi (Dyn)', 'LabelVerticalAlignment', 'bottom', 'LineWidth', 1.5);
     
-    % Only plot the second line if the steady-state optimal is different to avoid text overlap
     %if optimal_varpi ~= optimal_varpi_ss
     %    xline(optimal_varpi_ss, '--b', 'Opt \varpi (SS)', 'LabelVerticalAlignment', 'top', 'LineWidth', 1.5);
     %end

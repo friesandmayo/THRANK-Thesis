@@ -798,3 +798,6 @@ end;
 
 stoch_simul(order=2, pruning, periods=10000, replic=1000, irf=40, graph_format=(eps,pdf), nodisplay);
 
+
+
+// Author: Marcos Constantinou

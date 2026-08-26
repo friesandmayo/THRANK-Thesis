@@ -32,7 +32,6 @@ function post_process_results(run_type, out_dir, M_, options_, oo_base, oo_alt, 
         param_note = val_base; 
     end
     
-    % Decreased FontSize to 10 to ensure a multi-parameter string doesn't run off the page
     add_footer = @() annotation('textbox', [0, 0.01, 1, 0.04], 'String', param_note, ...
         'EdgeColor', 'none', 'HorizontalAlignment', 'center', ...
         'FontSize', 10, 'FontWeight', 'bold', 'Interpreter', 'none');
